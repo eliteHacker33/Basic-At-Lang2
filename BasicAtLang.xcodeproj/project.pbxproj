@@ -15,6 +15,20 @@
 		18626E471AA561F000CF3B7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18626E461AA561F000CF3B7C /* Images.xcassets */; };
 		18626E4A1AA561F000CF3B7C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E481AA561F000CF3B7C /* LaunchScreen.xib */; };
 		18626E561AA561F000CF3B7C /* BasicAtLangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E551AA561F000CF3B7C /* BasicAtLangTests.m */; };
+		18626E681AA56EEF00CF3B7C /* AboutMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E661AA56EEF00CF3B7C /* AboutMissionViewController.m */; };
+		18626E691AA56EEF00CF3B7C /* AboutMissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E671AA56EEF00CF3B7C /* AboutMissionViewController.xib */; };
+		18626E6D1AA56F0400CF3B7C /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E6B1AA56F0400CF3B7C /* ScheduleViewController.m */; };
+		18626E6E1AA56F0400CF3B7C /* ScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E6C1AA56F0400CF3B7C /* ScheduleViewController.xib */; };
+		18626E781AA56FF300CF3B7C /* SocialMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E761AA56FF300CF3B7C /* SocialMediaViewController.m */; };
+		18626E791AA56FF300CF3B7C /* SocialMediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E771AA56FF300CF3B7C /* SocialMediaViewController.xib */; };
+		18626E7D1AA5701B00CF3B7C /* ListenOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E7B1AA5701B00CF3B7C /* ListenOnlineViewController.m */; };
+		18626E7E1AA5701B00CF3B7C /* ListenOnlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E7C1AA5701B00CF3B7C /* ListenOnlineViewController.xib */; };
+		18626E821AA5703D00CF3B7C /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E801AA5703D00CF3B7C /* PhotosViewController.m */; };
+		18626E831AA5703D00CF3B7C /* PhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E811AA5703D00CF3B7C /* PhotosViewController.xib */; };
+		18626E871AA5705000CF3B7C /* BlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E851AA5705000CF3B7C /* BlogViewController.m */; };
+		18626E881AA5705000CF3B7C /* BlogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E861AA5705000CF3B7C /* BlogViewController.xib */; };
+		18626E8C1AA5706000CF3B7C /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E8A1AA5706000CF3B7C /* MusicViewController.m */; };
+		18626E8D1AA5706000CF3B7C /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E8B1AA5706000CF3B7C /* MusicViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +56,27 @@
 		18626E4F1AA561F000CF3B7C /* BasicAtLangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicAtLangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18626E541AA561F000CF3B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18626E551AA561F000CF3B7C /* BasicAtLangTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicAtLangTests.m; sourceTree = "<group>"; };
+		18626E651AA56EEF00CF3B7C /* AboutMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMissionViewController.h; sourceTree = "<group>"; };
+		18626E661AA56EEF00CF3B7C /* AboutMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMissionViewController.m; sourceTree = "<group>"; };
+		18626E671AA56EEF00CF3B7C /* AboutMissionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutMissionViewController.xib; sourceTree = "<group>"; };
+		18626E6A1AA56F0400CF3B7C /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		18626E6B1AA56F0400CF3B7C /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		18626E6C1AA56F0400CF3B7C /* ScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleViewController.xib; sourceTree = "<group>"; };
+		18626E751AA56FF300CF3B7C /* SocialMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaViewController.h; sourceTree = "<group>"; };
+		18626E761AA56FF300CF3B7C /* SocialMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaViewController.m; sourceTree = "<group>"; };
+		18626E771AA56FF300CF3B7C /* SocialMediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialMediaViewController.xib; sourceTree = "<group>"; };
+		18626E7A1AA5701B00CF3B7C /* ListenOnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenOnlineViewController.h; sourceTree = "<group>"; };
+		18626E7B1AA5701B00CF3B7C /* ListenOnlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenOnlineViewController.m; sourceTree = "<group>"; };
+		18626E7C1AA5701B00CF3B7C /* ListenOnlineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListenOnlineViewController.xib; sourceTree = "<group>"; };
+		18626E7F1AA5703D00CF3B7C /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
+		18626E801AA5703D00CF3B7C /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
+		18626E811AA5703D00CF3B7C /* PhotosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotosViewController.xib; sourceTree = "<group>"; };
+		18626E841AA5705000CF3B7C /* BlogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogViewController.h; sourceTree = "<group>"; };
+		18626E851AA5705000CF3B7C /* BlogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogViewController.m; sourceTree = "<group>"; };
+		18626E861AA5705000CF3B7C /* BlogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogViewController.xib; sourceTree = "<group>"; };
+		18626E891AA5706000CF3B7C /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
+		18626E8A1AA5706000CF3B7C /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+		18626E8B1AA5706000CF3B7C /* MusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +123,13 @@
 				18626E401AA561F000CF3B7C /* ViewController.h */,
 				18626E411AA561F000CF3B7C /* ViewController.m */,
 				18626E431AA561F000CF3B7C /* Main.storyboard */,
+				18626E741AA56F8C00CF3B7C /* Music */,
+				18626E731AA56F8000CF3B7C /* Blog */,
+				18626E721AA56F7200CF3B7C /* Photos */,
+				18626E711AA56F5500CF3B7C /* ListenOnlineTeachings */,
+				18626E701AA56F3E00CF3B7C /* SocialMedia */,
+				18626E6F1AA56F0F00CF3B7C /* Schedule */,
+				18626E641AA56EAE00CF3B7C /* About/Mission */,
 				18626E461AA561F000CF3B7C /* Images.xcassets */,
 				18626E481AA561F000CF3B7C /* LaunchScreen.xib */,
 				18626E3D1AA561F000CF3B7C /* BasicAtLang.xcdatamodeld */,
@@ -120,6 +162,77 @@
 				18626E541AA561F000CF3B7C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18626E641AA56EAE00CF3B7C /* About/Mission */ = {
+			isa = PBXGroup;
+			children = (
+				18626E651AA56EEF00CF3B7C /* AboutMissionViewController.h */,
+				18626E661AA56EEF00CF3B7C /* AboutMissionViewController.m */,
+				18626E671AA56EEF00CF3B7C /* AboutMissionViewController.xib */,
+			);
+			name = About/Mission;
+			sourceTree = "<group>";
+		};
+		18626E6F1AA56F0F00CF3B7C /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				18626E6A1AA56F0400CF3B7C /* ScheduleViewController.h */,
+				18626E6B1AA56F0400CF3B7C /* ScheduleViewController.m */,
+				18626E6C1AA56F0400CF3B7C /* ScheduleViewController.xib */,
+			);
+			name = Schedule;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		18626E701AA56F3E00CF3B7C /* SocialMedia */ = {
+			isa = PBXGroup;
+			children = (
+				18626E751AA56FF300CF3B7C /* SocialMediaViewController.h */,
+				18626E761AA56FF300CF3B7C /* SocialMediaViewController.m */,
+				18626E771AA56FF300CF3B7C /* SocialMediaViewController.xib */,
+			);
+			name = SocialMedia;
+			sourceTree = "<group>";
+		};
+		18626E711AA56F5500CF3B7C /* ListenOnlineTeachings */ = {
+			isa = PBXGroup;
+			children = (
+				18626E7A1AA5701B00CF3B7C /* ListenOnlineViewController.h */,
+				18626E7B1AA5701B00CF3B7C /* ListenOnlineViewController.m */,
+				18626E7C1AA5701B00CF3B7C /* ListenOnlineViewController.xib */,
+			);
+			name = ListenOnlineTeachings;
+			sourceTree = "<group>";
+		};
+		18626E721AA56F7200CF3B7C /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				18626E7F1AA5703D00CF3B7C /* PhotosViewController.h */,
+				18626E801AA5703D00CF3B7C /* PhotosViewController.m */,
+				18626E811AA5703D00CF3B7C /* PhotosViewController.xib */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
+		18626E731AA56F8000CF3B7C /* Blog */ = {
+			isa = PBXGroup;
+			children = (
+				18626E841AA5705000CF3B7C /* BlogViewController.h */,
+				18626E851AA5705000CF3B7C /* BlogViewController.m */,
+				18626E861AA5705000CF3B7C /* BlogViewController.xib */,
+			);
+			name = Blog;
+			sourceTree = "<group>";
+		};
+		18626E741AA56F8C00CF3B7C /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				18626E891AA5706000CF3B7C /* MusicViewController.h */,
+				18626E8A1AA5706000CF3B7C /* MusicViewController.m */,
+				18626E8B1AA5706000CF3B7C /* MusicViewController.xib */,
+			);
+			name = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +316,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				18626E451AA561F000CF3B7C /* Main.storyboard in Resources */,
+				18626E7E1AA5701B00CF3B7C /* ListenOnlineViewController.xib in Resources */,
+				18626E8D1AA5706000CF3B7C /* MusicViewController.xib in Resources */,
 				18626E4A1AA561F000CF3B7C /* LaunchScreen.xib in Resources */,
+				18626E881AA5705000CF3B7C /* BlogViewController.xib in Resources */,
+				18626E6E1AA56F0400CF3B7C /* ScheduleViewController.xib in Resources */,
 				18626E471AA561F000CF3B7C /* Images.xcassets in Resources */,
+				18626E831AA5703D00CF3B7C /* PhotosViewController.xib in Resources */,
+				18626E791AA56FF300CF3B7C /* SocialMediaViewController.xib in Resources */,
+				18626E691AA56EEF00CF3B7C /* AboutMissionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +343,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				18626E3C1AA561F000CF3B7C /* AppDelegate.m in Sources */,
+				18626E781AA56FF300CF3B7C /* SocialMediaViewController.m in Sources */,
+				18626E871AA5705000CF3B7C /* BlogViewController.m in Sources */,
+				18626E7D1AA5701B00CF3B7C /* ListenOnlineViewController.m in Sources */,
+				18626E6D1AA56F0400CF3B7C /* ScheduleViewController.m in Sources */,
+				18626E681AA56EEF00CF3B7C /* AboutMissionViewController.m in Sources */,
 				18626E391AA561F000CF3B7C /* main.m in Sources */,
 				18626E421AA561F000CF3B7C /* ViewController.m in Sources */,
+				18626E8C1AA5706000CF3B7C /* MusicViewController.m in Sources */,
+				18626E821AA5703D00CF3B7C /* PhotosViewController.m in Sources */,
 				18626E3F1AA561F000CF3B7C /* BasicAtLang.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
