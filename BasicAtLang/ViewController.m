@@ -14,6 +14,7 @@
 #import "PhotosViewController.h"
 #import "BlogViewController.h"
 #import "MusicViewController.h"
+#import "GetInvolvedViewController.h"
 
 @interface ViewController ()
 
@@ -23,6 +24,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *listenOnlineImage;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImage;
 @property (weak, nonatomic) IBOutlet UIImageView *musicImage;
+@property (weak, nonatomic) IBOutlet UIImageView *blogImage;
+@property (weak, nonatomic) IBOutlet UIImageView *getInvolvedImage;
+
 
 @end
 
@@ -39,7 +43,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)userTappedTopLeftOption:(UITapGestureRecognizer *)tapGesture
+-(void)userTappedAboutMissionOption:(UITapGestureRecognizer *)tapGesture
 
 {
     [UIView animateWithDuration:0.1 animations:^{self.aboutMissionImage.alpha = 0.0;}];
@@ -50,7 +54,7 @@
 
 
 
--(void)userTappedMiddleLeftOption:(UITapGestureRecognizer *)tapGesture
+-(void)userTappedSocialMediaOption:(UITapGestureRecognizer *)tapGesture
 
 {
     [UIView animateWithDuration:0.1 animations:^{self.socialMediaImage.alpha = 0.0;}];
@@ -59,7 +63,7 @@
     [self.navigationController pushViewController:socialMediaController animated:YES];
 }
 
--(void)userTappedBottomLeftOption:(UITapGestureRecognizer *)tapGesture
+-(void)userTappedPhotoOption:(UITapGestureRecognizer *)tapGesture
 
 {
     [UIView animateWithDuration:0.1 animations:^{self.photoImage.alpha = 0.0;}];
@@ -68,7 +72,7 @@
     [self.navigationController pushViewController:photosViewController animated:YES];
 }
 
--(void)userTappedTopRightOption:(UITapGestureRecognizer *)tapGesture
+-(void)userTappedScheduleOption:(UITapGestureRecognizer *)tapGesture
 
 {
     [UIView animateWithDuration:0.1 animations:^{self.scheduleImage.alpha = 0.0;}];
@@ -77,7 +81,7 @@
     [self.navigationController pushViewController:scheduleViewController animated:YES];
 }
 
--(void)userTappedMiddleRightOption:(UITapGestureRecognizer *)tapGesture
+-(void)userTappedListenOnlineOption:(UITapGestureRecognizer *)tapGesture
 
 {
     [UIView animateWithDuration:0.1 animations:^{self.listenOnlineImage.alpha = 0.0;}];
@@ -86,9 +90,7 @@
     [self.navigationController pushViewController:teachingController animated:YES];
 }
 
-
-
--(void)userTappedBottomRightOption:(UITapGestureRecognizer *)tapGesture
+-(void)userTappedMusicOption:(UITapGestureRecognizer *)tapGesture
 
 {
     [UIView animateWithDuration:0.1 animations:^{self.musicImage.alpha = 0.0;}];
@@ -97,82 +99,97 @@
     [self.navigationController pushViewController:musicViewController animated:YES];
 }
 
+-(void)userTappedBlogImage: (UITapGestureRecognizer *)tapGesture{
+    [UIView animateWithDuration:0.1 animations:^{self.blogImage.alpha = 0.0;}];
+    [UIView animateWithDuration:0.3 animations:^{self.blogImage.alpha = 1.0;}];
+    BlogViewController *blogViewController = [BlogViewController new];
+    [self.navigationController pushViewController:blogViewController animated:YES];
+}
 
+-(void)userTappedGetInvolvedImage: (UITapGestureRecognizer *)tapGesture{
+    [UIView animateWithDuration:0.1 animations:^{self.getInvolvedImage.alpha = 0.0;}];
+    [UIView animateWithDuration:0.3 animations:^{self.getInvolvedImage.alpha = 1.0;}];
+    GetInvolvedViewController *getInvolvedViewController = [GetInvolvedViewController new];
+    [self.navigationController pushViewController:getInvolvedViewController animated:YES];
+}
 
 -(void)instatiateMainButtons
 
 {
-    UITapGestureRecognizer *tapMissionImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedTopLeftOption:)];
+    self.aboutMissionImage.translatesAutoresizingMaskIntoConstraints = NO;
+    self.scheduleImage.translatesAutoresizingMaskIntoConstraints = NO;
+    self.socialMediaImage.translatesAutoresizingMaskIntoConstraints = NO;
+    self.listenOnlineImage.translatesAutoresizingMaskIntoConstraints = NO;
+    self.photoImage.translatesAutoresizingMaskIntoConstraints = NO;
+    self.musicImage.translatesAutoresizingMaskIntoConstraints = NO;
+    self.blogImage.translatesAutoresizingMaskIntoConstraints = NO;
+    self.getInvolvedImage.translatesAutoresizingMaskIntoConstraints = NO;
     
-    UITapGestureRecognizer *tapSocialMediaImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedMiddleLeftOption:)];
+    UITapGestureRecognizer *tapMissionImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedAboutMissionOption:)];
     
-    UITapGestureRecognizer *tapPhotoImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedBottomLeftOption:)];
+    UITapGestureRecognizer *tapSocialMediaImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedSocialMediaOption:)];
     
-    UITapGestureRecognizer *tapScheduleImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedTopRightOption:)];
+    UITapGestureRecognizer *tapPhotoImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedPhotoOption:)];
     
-    UITapGestureRecognizer *tapTeachingsImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedMiddleRightOption:)];
+    UITapGestureRecognizer *tapScheduleImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedScheduleOption:)];
     
-    UITapGestureRecognizer *tapMusicImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedBottomRightOption:)];
+    UITapGestureRecognizer *tapTeachingsImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedListenOnlineOption:)];
+    
+    UITapGestureRecognizer *tapMusicImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedMusicOption:)];
+    
+    UITapGestureRecognizer *tapBlogImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedBlogImage:)];
+    
+    UITapGestureRecognizer *tapGetInvolvedImage = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userTappedGetInvolvedImage:)];
     
     [self.aboutMissionImage setUserInteractionEnabled:YES];
-    
     [self.scheduleImage setUserInteractionEnabled:YES];
-    
     [self.socialMediaImage setUserInteractionEnabled:YES];
-    
     [self.listenOnlineImage setUserInteractionEnabled:YES];
-    
     [self.photoImage setUserInteractionEnabled:YES];
-    
     [self.musicImage setUserInteractionEnabled:YES];
+    [self.blogImage setUserInteractionEnabled:YES];
+    [self.getInvolvedImage setUserInteractionEnabled:YES];
     
     [self.aboutMissionImage addGestureRecognizer:tapMissionImage];
-    
     [self.socialMediaImage addGestureRecognizer:tapSocialMediaImage];
-    
     [self.photoImage addGestureRecognizer:tapPhotoImage];
-    
     [self.scheduleImage addGestureRecognizer:tapScheduleImage];
-    
     [self.listenOnlineImage addGestureRecognizer:tapTeachingsImage];
-    
     [self.musicImage addGestureRecognizer:tapMusicImage];
+    [self.blogImage addGestureRecognizer:tapBlogImage];
+    [self.getInvolvedImage addGestureRecognizer:tapGetInvolvedImage];
     
-    CALayer *topLeftLayer = [self.aboutMissionImage layer];
+    CALayer *aboutMissionLayer = [self.aboutMissionImage layer];
+    [aboutMissionLayer setMasksToBounds:YES];
+    [aboutMissionLayer setCornerRadius:50.0];
     
-    [topLeftLayer setMasksToBounds:YES];
+    CALayer *socialMediaLayer = [self.socialMediaImage layer];
+    [socialMediaLayer setMasksToBounds:YES];
+    [socialMediaLayer setCornerRadius:50.0];
     
-    [topLeftLayer setCornerRadius:10.0];
+    CALayer *photoImageLayer = [self.photoImage layer];
+    [photoImageLayer setMasksToBounds:YES];
+    [photoImageLayer setCornerRadius:50.0];
     
-    CALayer *middleLeftLayer = [self.socialMediaImage layer];
+    CALayer *scheduleImageLayer = [self.scheduleImage layer];
+    [scheduleImageLayer setMasksToBounds:YES];
+    [scheduleImageLayer setCornerRadius:50.0];
     
-    [middleLeftLayer setMasksToBounds:YES];
+    CALayer *listenOnlineLayer = [self.listenOnlineImage layer];
+    [listenOnlineLayer setMasksToBounds:YES];
+    [listenOnlineLayer setCornerRadius:50.0];
     
-    [middleLeftLayer setCornerRadius:50.0];
+    CALayer *musicImageLayer = [self.musicImage layer];
+    [musicImageLayer setMasksToBounds:YES];
+    [musicImageLayer setCornerRadius:50.0];
     
-    CALayer *bottomLeftLayer = [self.photoImage layer];
+    CALayer *blogImageLayer = [self.blogImage layer];
+    [blogImageLayer setMasksToBounds:YES];
+    [blogImageLayer setCornerRadius:50.0];
     
-    [bottomLeftLayer setMasksToBounds:YES];
-    
-    [bottomLeftLayer setCornerRadius:50.0];
-    
-    CALayer *topRightLayer = [self.scheduleImage layer];
-    
-    [topRightLayer setMasksToBounds:YES];
-    
-    [topRightLayer setCornerRadius:50.0];
-    
-    CALayer *middleRightLayer = [self.listenOnlineImage layer];
-    
-    [middleRightLayer setMasksToBounds:YES];
-    
-    [middleRightLayer setCornerRadius:50.0];
-    
-    CALayer *bottomRightLayer = [self.musicImage layer];
-    
-    [bottomRightLayer setMasksToBounds:YES];
-    
-    [bottomRightLayer setCornerRadius:50.0];
+    CALayer *getInvolvedLayer = [self.getInvolvedImage layer];
+    [getInvolvedLayer setMasksToBounds:YES];
+    [getInvolvedLayer setCornerRadius:50.0];
     
 }
 

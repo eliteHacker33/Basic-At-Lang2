@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184648671AAD3FA800906C58 /* GetInvolvedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184648651AAD3FA800906C58 /* GetInvolvedViewController.m */; };
+		184648681AAD3FA800906C58 /* GetInvolvedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184648661AAD3FA800906C58 /* GetInvolvedViewController.xib */; };
 		18626E391AA561F000CF3B7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E381AA561F000CF3B7C /* main.m */; };
 		18626E3C1AA561F000CF3B7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E3B1AA561F000CF3B7C /* AppDelegate.m */; };
 		18626E3F1AA561F000CF3B7C /* BasicAtLang.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18626E3D1AA561F000CF3B7C /* BasicAtLang.xcdatamodeld */; };
@@ -29,6 +31,10 @@
 		18626E881AA5705000CF3B7C /* BlogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E861AA5705000CF3B7C /* BlogViewController.xib */; };
 		18626E8C1AA5706000CF3B7C /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E8A1AA5706000CF3B7C /* MusicViewController.m */; };
 		18626E8D1AA5706000CF3B7C /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E8B1AA5706000CF3B7C /* MusicViewController.xib */; };
+		18F8C87A1AC72E7300A1E8D1 /* Twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F8C8791AC72E7300A1E8D1 /* Twitter@2x.png */; };
+		18F8C87C1AC7307100A1E8D1 /* Facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F8C87B1AC7307100A1E8D1 /* Facebook@2x.png */; };
+		18F8C87E1AC7307900A1E8D1 /* Instagram@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F8C87D1AC7307900A1E8D1 /* Instagram@2x.png */; };
+		18F8C8801AC7308300A1E8D1 /* YouTube@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F8C87F1AC7308300A1E8D1 /* YouTube@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184648641AAD3FA800906C58 /* GetInvolvedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetInvolvedViewController.h; sourceTree = "<group>"; };
+		184648651AAD3FA800906C58 /* GetInvolvedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetInvolvedViewController.m; sourceTree = "<group>"; };
+		184648661AAD3FA800906C58 /* GetInvolvedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetInvolvedViewController.xib; sourceTree = "<group>"; };
 		18626E331AA561F000CF3B7C /* BasicAtLang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicAtLang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18626E371AA561F000CF3B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18626E381AA561F000CF3B7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,6 +86,10 @@
 		18626E891AA5706000CF3B7C /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
 		18626E8A1AA5706000CF3B7C /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		18626E8B1AA5706000CF3B7C /* MusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
+		18F8C8791AC72E7300A1E8D1 /* Twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Twitter@2x.png"; path = "Images.xcassets/Twitter@2x.png"; sourceTree = "<group>"; };
+		18F8C87B1AC7307100A1E8D1 /* Facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Facebook@2x.png"; path = "Images.xcassets/Facebook@2x.png"; sourceTree = "<group>"; };
+		18F8C87D1AC7307900A1E8D1 /* Instagram@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Instagram@2x.png"; path = "Images.xcassets/Instagram@2x.png"; sourceTree = "<group>"; };
+		18F8C87F1AC7308300A1E8D1 /* YouTube@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "YouTube@2x.png"; path = "Images.xcassets/YouTube@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +110,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184648691AAD3FB100906C58 /* GetInvolved */ = {
+			isa = PBXGroup;
+			children = (
+				184648661AAD3FA800906C58 /* GetInvolvedViewController.xib */,
+				184648651AAD3FA800906C58 /* GetInvolvedViewController.m */,
+				184648641AAD3FA800906C58 /* GetInvolvedViewController.h */,
+			);
+			name = GetInvolved;
+			sourceTree = "<group>";
+		};
 		18626E2A1AA561F000CF3B7C = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +146,7 @@
 				18626E401AA561F000CF3B7C /* ViewController.h */,
 				18626E411AA561F000CF3B7C /* ViewController.m */,
 				18626E431AA561F000CF3B7C /* Main.storyboard */,
+				184648691AAD3FB100906C58 /* GetInvolved */,
 				18626E741AA56F8C00CF3B7C /* Music */,
 				18626E731AA56F8000CF3B7C /* Blog */,
 				18626E721AA56F7200CF3B7C /* Photos */,
@@ -131,6 +155,10 @@
 				18626E6F1AA56F0F00CF3B7C /* Schedule */,
 				18626E641AA56EAE00CF3B7C /* About/Mission */,
 				18626E461AA561F000CF3B7C /* Images.xcassets */,
+				18F8C87F1AC7308300A1E8D1 /* YouTube@2x.png */,
+				18F8C87D1AC7307900A1E8D1 /* Instagram@2x.png */,
+				18F8C87B1AC7307100A1E8D1 /* Facebook@2x.png */,
+				18F8C8791AC72E7300A1E8D1 /* Twitter@2x.png */,
 				18626E481AA561F000CF3B7C /* LaunchScreen.xib */,
 				18626E3D1AA561F000CF3B7C /* BasicAtLang.xcdatamodeld */,
 				18626E361AA561F000CF3B7C /* Supporting Files */,
@@ -315,14 +343,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F8C87C1AC7307100A1E8D1 /* Facebook@2x.png in Resources */,
 				18626E451AA561F000CF3B7C /* Main.storyboard in Resources */,
 				18626E7E1AA5701B00CF3B7C /* ListenOnlineViewController.xib in Resources */,
 				18626E8D1AA5706000CF3B7C /* MusicViewController.xib in Resources */,
 				18626E4A1AA561F000CF3B7C /* LaunchScreen.xib in Resources */,
 				18626E881AA5705000CF3B7C /* BlogViewController.xib in Resources */,
 				18626E6E1AA56F0400CF3B7C /* ScheduleViewController.xib in Resources */,
+				18F8C87A1AC72E7300A1E8D1 /* Twitter@2x.png in Resources */,
 				18626E471AA561F000CF3B7C /* Images.xcassets in Resources */,
+				18F8C87E1AC7307900A1E8D1 /* Instagram@2x.png in Resources */,
+				184648681AAD3FA800906C58 /* GetInvolvedViewController.xib in Resources */,
 				18626E831AA5703D00CF3B7C /* PhotosViewController.xib in Resources */,
+				18F8C8801AC7308300A1E8D1 /* YouTube@2x.png in Resources */,
 				18626E791AA56FF300CF3B7C /* SocialMediaViewController.xib in Resources */,
 				18626E691AA56EEF00CF3B7C /* AboutMissionViewController.xib in Resources */,
 			);
@@ -346,6 +379,7 @@
 				18626E781AA56FF300CF3B7C /* SocialMediaViewController.m in Sources */,
 				18626E871AA5705000CF3B7C /* BlogViewController.m in Sources */,
 				18626E7D1AA5701B00CF3B7C /* ListenOnlineViewController.m in Sources */,
+				184648671AAD3FA800906C58 /* GetInvolvedViewController.m in Sources */,
 				18626E6D1AA56F0400CF3B7C /* ScheduleViewController.m in Sources */,
 				18626E681AA56EEF00CF3B7C /* AboutMissionViewController.m in Sources */,
 				18626E391AA561F000CF3B7C /* main.m in Sources */,
@@ -543,6 +577,7 @@
 				18626E5B1AA561F000CF3B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18626E5C1AA561F000CF3B7C /* Build configuration list for PBXNativeTarget "BasicAtLangTests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +586,7 @@
 				18626E5E1AA561F000CF3B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
