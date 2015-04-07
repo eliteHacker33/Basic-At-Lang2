@@ -16,7 +16,7 @@
 #import "MusicViewController.h"
 #import "GetInvolvedViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITabBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *aboutMissionImage;
 @property (weak, nonatomic) IBOutlet UIImageView *scheduleImage;
@@ -26,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *musicImage;
 @property (weak, nonatomic) IBOutlet UIImageView *blogImage;
 @property (weak, nonatomic) IBOutlet UIImageView *getInvolvedImage;
-
+@property (weak, nonatomic) IBOutlet UITabBar *socialMediaTabBar;
 
 @end
 
@@ -41,6 +41,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    if ([item.title isEqualToString:@"Twitter"]){
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.twitter.com/basicatlang"]];
+    }
+    else if ([item.title isEqualToString:@"Facebook"]){
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.facebook.com/BasicAtLang"]];
+    }
+    else if ([item.title isEqualToString:@"Instagram"]){
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://instagram.com/basicatlang"]];
+    }
+    else if ([item.title isEqualToString:@"YouTube"]){
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.youtube.com/user/BASICcommunity"]];
+    }
 }
 
 -(void)userTappedAboutMissionOption:(UITapGestureRecognizer *)tapGesture
@@ -192,6 +207,5 @@
     [getInvolvedLayer setCornerRadius:50.0];
     
 }
-
 
 @end

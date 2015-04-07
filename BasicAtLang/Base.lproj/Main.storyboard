@@ -29,6 +29,9 @@
                                     <tabBarItem title="Instagram" image="Instagram.png" id="Y1u-SM-wlD"/>
                                     <tabBarItem title="YouTube" image="YouTube.png" id="qbl-h9-FbS"/>
                                 </items>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="A75-mX-Sx1"/>
+                                </connections>
                             </tabBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMd-Ts-3Iq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
@@ -162,6 +165,7 @@
                         <outlet property="photoImage" destination="SWj-5h-QjN" id="tM6-A3-CW8"/>
                         <outlet property="scheduleImage" destination="bob-ZR-7Fs" id="uDi-nY-sGQ"/>
                         <outlet property="socialMediaImage" destination="Tpt-ox-kEe" id="P2Q-Up-HQd"/>
+                        <outlet property="socialMediaTabBar" destination="79v-gE-3UN" id="8gs-nS-WfI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
