@@ -9,6 +9,7 @@
 #import "SocialMediaViewController.h"
 
 @interface SocialMediaViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -16,12 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Social Media";
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)goToStoryView:(id)sender {
 }
 
 /*
