@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>847FF2C4-8437-4B83-A8CD-7E89793D1FBC</string>
 	<key>IDESourceControlProjectName</key>
-	<string>BasicAtLang</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9B206C15884C0CDF898A5E90699BD7B5F61232E8</key>
 		<string>github.com:ethanwestering/Basic-At-Lang2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BasicAtLang.xcodeproj</string>
+	<string>BasicAtLang.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9B206C15884C0CDF898A5E90699BD7B5F61232E8</key>

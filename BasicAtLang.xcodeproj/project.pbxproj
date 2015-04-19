@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		184648671AAD3FA800906C58 /* GetInvolvedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184648651AAD3FA800906C58 /* GetInvolvedViewController.m */; };
 		184648681AAD3FA800906C58 /* GetInvolvedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184648661AAD3FA800906C58 /* GetInvolvedViewController.xib */; };
+		18520CA71AE4606C004A0CFD /* AddPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18520CA51AE4606C004A0CFD /* AddPostViewController.m */; };
+		18520CA81AE4606C004A0CFD /* AddPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18520CA61AE4606C004A0CFD /* AddPostViewController.xib */; };
 		18626E391AA561F000CF3B7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E381AA561F000CF3B7C /* main.m */; };
 		18626E3C1AA561F000CF3B7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E3B1AA561F000CF3B7C /* AppDelegate.m */; };
 		18626E3F1AA561F000CF3B7C /* BasicAtLang.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18626E3D1AA561F000CF3B7C /* BasicAtLang.xcdatamodeld */; };
@@ -51,6 +53,9 @@
 		184648641AAD3FA800906C58 /* GetInvolvedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetInvolvedViewController.h; sourceTree = "<group>"; };
 		184648651AAD3FA800906C58 /* GetInvolvedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetInvolvedViewController.m; sourceTree = "<group>"; };
 		184648661AAD3FA800906C58 /* GetInvolvedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetInvolvedViewController.xib; sourceTree = "<group>"; };
+		18520CA41AE4606C004A0CFD /* AddPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPostViewController.h; sourceTree = "<group>"; };
+		18520CA51AE4606C004A0CFD /* AddPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPostViewController.m; sourceTree = "<group>"; };
+		18520CA61AE4606C004A0CFD /* AddPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPostViewController.xib; sourceTree = "<group>"; };
 		18626E331AA561F000CF3B7C /* BasicAtLang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicAtLang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18626E371AA561F000CF3B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18626E381AA561F000CF3B7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +125,16 @@
 			name = GetInvolved;
 			sourceTree = "<group>";
 		};
+		18520CA31AE4602F004A0CFD /* AddPostViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18520CA41AE4606C004A0CFD /* AddPostViewController.h */,
+				18520CA51AE4606C004A0CFD /* AddPostViewController.m */,
+				18520CA61AE4606C004A0CFD /* AddPostViewController.xib */,
+			);
+			name = AddPostViewController;
+			sourceTree = "<group>";
+		};
 		18626E2A1AA561F000CF3B7C = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +169,7 @@
 				18626E701AA56F3E00CF3B7C /* SocialMedia */,
 				18626E6F1AA56F0F00CF3B7C /* Schedule */,
 				18626E641AA56EAE00CF3B7C /* About/Mission */,
+				18520CA31AE4602F004A0CFD /* AddPostViewController */,
 				18626E461AA561F000CF3B7C /* Images.xcassets */,
 				18F8C87F1AC7308300A1E8D1 /* YouTube@2x.png */,
 				18F8C87D1AC7307900A1E8D1 /* Instagram@2x.png */,
@@ -351,6 +367,7 @@
 				18626E881AA5705000CF3B7C /* BlogViewController.xib in Resources */,
 				18626E6E1AA56F0400CF3B7C /* ScheduleViewController.xib in Resources */,
 				18F8C87A1AC72E7300A1E8D1 /* Twitter@2x.png in Resources */,
+				18520CA81AE4606C004A0CFD /* AddPostViewController.xib in Resources */,
 				18626E471AA561F000CF3B7C /* Images.xcassets in Resources */,
 				18F8C87E1AC7307900A1E8D1 /* Instagram@2x.png in Resources */,
 				184648681AAD3FA800906C58 /* GetInvolvedViewController.xib in Resources */,
@@ -381,6 +398,7 @@
 				18626E7D1AA5701B00CF3B7C /* ListenOnlineViewController.m in Sources */,
 				184648671AAD3FA800906C58 /* GetInvolvedViewController.m in Sources */,
 				18626E6D1AA56F0400CF3B7C /* ScheduleViewController.m in Sources */,
+				18520CA71AE4606C004A0CFD /* AddPostViewController.m in Sources */,
 				18626E681AA56EEF00CF3B7C /* AboutMissionViewController.m in Sources */,
 				18626E391AA561F000CF3B7C /* main.m in Sources */,
 				18626E421AA561F000CF3B7C /* ViewController.m in Sources */,

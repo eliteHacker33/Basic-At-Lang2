@@ -7,6 +7,7 @@
 //
 
 #import "SocialMediaViewController.h"
+#import "AddPostViewController.h"
 
 @interface SocialMediaViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -26,6 +27,8 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)goToStoryView:(id)sender {
+    AddPostViewController *addPostViewController = [AddPostViewController new];
+    [self.navigationController pushViewController:addPostViewController animated:YES];
 }
 
 /*

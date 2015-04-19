@@ -9,6 +9,7 @@
 #import "AboutMissionViewController.h"
 
 @interface AboutMissionViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *aboutTextView;
 
 @end
 
@@ -24,7 +25,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)viewDidLayoutSubviews {
+    [self.aboutTextView setContentOffset:CGPointZero animated:NO];
+}
 /*
 #pragma mark - Navigation
 
