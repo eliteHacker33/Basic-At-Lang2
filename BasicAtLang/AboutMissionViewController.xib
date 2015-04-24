@@ -65,6 +65,7 @@ God has been growing the hearts of our leaders as well as the numbers of leader 
                 <constraint firstAttribute="bottom" secondItem="ALE-WO-fOD" secondAttribute="bottom" id="t5V-6r-chB"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="55" y="374"/>
         </view>
     </objects>
 </document>

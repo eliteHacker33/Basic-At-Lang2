@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocialMediaViewController">
             <connections>
+                <outlet property="socialMediaPrompt" destination="MUQ-vY-MzY" id="4Vd-Rw-TBO"/>
                 <outlet property="tableView" destination="Pu3-ge-Txt" id="tCs-Ro-hfS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

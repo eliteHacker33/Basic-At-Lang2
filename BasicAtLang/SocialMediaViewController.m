@@ -11,6 +11,7 @@
 
 @interface SocialMediaViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextView *socialMediaPrompt;
 
 @end
 
@@ -19,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Social Media";
+    [self.socialMediaPrompt setContentOffset:CGPointZero animated:NO];
+
     // Do any additional setup after loading the view from its nib.
 }
 

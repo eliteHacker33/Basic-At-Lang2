@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotosViewController : UIViewController
+@interface PhotosViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 
 @end

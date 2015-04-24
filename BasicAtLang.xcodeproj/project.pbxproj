@@ -28,11 +28,13 @@
 		18626E7D1AA5701B00CF3B7C /* ListenOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E7B1AA5701B00CF3B7C /* ListenOnlineViewController.m */; };
 		18626E7E1AA5701B00CF3B7C /* ListenOnlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E7C1AA5701B00CF3B7C /* ListenOnlineViewController.xib */; };
 		18626E821AA5703D00CF3B7C /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E801AA5703D00CF3B7C /* PhotosViewController.m */; };
-		18626E831AA5703D00CF3B7C /* PhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E811AA5703D00CF3B7C /* PhotosViewController.xib */; };
 		18626E871AA5705000CF3B7C /* BlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E851AA5705000CF3B7C /* BlogViewController.m */; };
 		18626E881AA5705000CF3B7C /* BlogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E861AA5705000CF3B7C /* BlogViewController.xib */; };
 		18626E8C1AA5706000CF3B7C /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E8A1AA5706000CF3B7C /* MusicViewController.m */; };
 		18626E8D1AA5706000CF3B7C /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E8B1AA5706000CF3B7C /* MusicViewController.xib */; };
+		18E403A71AE9A0B4001BFD95 /* 66.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E403A61AE9A0B4001BFD95 /* 66.jpg */; };
+		18E403AD1AE9F0E2001BFD95 /* PhotosViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E403AC1AE9F0E2001BFD95 /* PhotosViewController.storyboard */; };
+		18E403B01AEA13B1001BFD95 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E403AF1AEA13B1001BFD95 /* CustomCell.m */; };
 		18F8C87A1AC72E7300A1E8D1 /* Twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F8C8791AC72E7300A1E8D1 /* Twitter@2x.png */; };
 		18F8C87C1AC7307100A1E8D1 /* Facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F8C87B1AC7307100A1E8D1 /* Facebook@2x.png */; };
 		18F8C87E1AC7307900A1E8D1 /* Instagram@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F8C87D1AC7307900A1E8D1 /* Instagram@2x.png */; };
@@ -84,13 +86,16 @@
 		18626E7C1AA5701B00CF3B7C /* ListenOnlineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListenOnlineViewController.xib; sourceTree = "<group>"; };
 		18626E7F1AA5703D00CF3B7C /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
 		18626E801AA5703D00CF3B7C /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
-		18626E811AA5703D00CF3B7C /* PhotosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotosViewController.xib; sourceTree = "<group>"; };
 		18626E841AA5705000CF3B7C /* BlogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogViewController.h; sourceTree = "<group>"; };
 		18626E851AA5705000CF3B7C /* BlogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogViewController.m; sourceTree = "<group>"; };
 		18626E861AA5705000CF3B7C /* BlogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogViewController.xib; sourceTree = "<group>"; };
 		18626E891AA5706000CF3B7C /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
 		18626E8A1AA5706000CF3B7C /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		18626E8B1AA5706000CF3B7C /* MusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
+		18E403A61AE9A0B4001BFD95 /* 66.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 66.jpg; sourceTree = "<group>"; };
+		18E403AC1AE9F0E2001BFD95 /* PhotosViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotosViewController.storyboard; sourceTree = "<group>"; };
+		18E403AE1AEA13B1001BFD95 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		18E403AF1AEA13B1001BFD95 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		18F8C8791AC72E7300A1E8D1 /* Twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Twitter@2x.png"; path = "Images.xcassets/Twitter@2x.png"; sourceTree = "<group>"; };
 		18F8C87B1AC7307100A1E8D1 /* Facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Facebook@2x.png"; path = "Images.xcassets/Facebook@2x.png"; sourceTree = "<group>"; };
 		18F8C87D1AC7307900A1E8D1 /* Instagram@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Instagram@2x.png"; path = "Images.xcassets/Instagram@2x.png"; sourceTree = "<group>"; };
@@ -253,8 +258,11 @@
 			isa = PBXGroup;
 			children = (
 				18626E7F1AA5703D00CF3B7C /* PhotosViewController.h */,
+				18E403AE1AEA13B1001BFD95 /* CustomCell.h */,
+				18E403AF1AEA13B1001BFD95 /* CustomCell.m */,
 				18626E801AA5703D00CF3B7C /* PhotosViewController.m */,
-				18626E811AA5703D00CF3B7C /* PhotosViewController.xib */,
+				18E403AC1AE9F0E2001BFD95 /* PhotosViewController.storyboard */,
+				18E403A61AE9A0B4001BFD95 /* 66.jpg */,
 			);
 			name = Photos;
 			sourceTree = "<group>";
@@ -359,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E403AD1AE9F0E2001BFD95 /* PhotosViewController.storyboard in Resources */,
 				18F8C87C1AC7307100A1E8D1 /* Facebook@2x.png in Resources */,
 				18626E451AA561F000CF3B7C /* Main.storyboard in Resources */,
 				18626E7E1AA5701B00CF3B7C /* ListenOnlineViewController.xib in Resources */,
@@ -369,9 +378,9 @@
 				18F8C87A1AC72E7300A1E8D1 /* Twitter@2x.png in Resources */,
 				18520CA81AE4606C004A0CFD /* AddPostViewController.xib in Resources */,
 				18626E471AA561F000CF3B7C /* Images.xcassets in Resources */,
+				18E403A71AE9A0B4001BFD95 /* 66.jpg in Resources */,
 				18F8C87E1AC7307900A1E8D1 /* Instagram@2x.png in Resources */,
 				184648681AAD3FA800906C58 /* GetInvolvedViewController.xib in Resources */,
-				18626E831AA5703D00CF3B7C /* PhotosViewController.xib in Resources */,
 				18F8C8801AC7308300A1E8D1 /* YouTube@2x.png in Resources */,
 				18626E791AA56FF300CF3B7C /* SocialMediaViewController.xib in Resources */,
 				18626E691AA56EEF00CF3B7C /* AboutMissionViewController.xib in Resources */,
@@ -396,6 +405,7 @@
 				18626E781AA56FF300CF3B7C /* SocialMediaViewController.m in Sources */,
 				18626E871AA5705000CF3B7C /* BlogViewController.m in Sources */,
 				18626E7D1AA5701B00CF3B7C /* ListenOnlineViewController.m in Sources */,
+				18E403B01AEA13B1001BFD95 /* CustomCell.m in Sources */,
 				184648671AAD3FA800906C58 /* GetInvolvedViewController.m in Sources */,
 				18626E6D1AA56F0400CF3B7C /* ScheduleViewController.m in Sources */,
 				18520CA71AE4606C004A0CFD /* AddPostViewController.m in Sources */,

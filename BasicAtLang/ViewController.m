@@ -84,7 +84,11 @@
 {
     [UIView animateWithDuration:0.1 animations:^{self.photoImage.alpha = 0.0;}];
     [UIView animateWithDuration:0.3 animations:^{self.photoImage.alpha = 1.0;}];
-    PhotosViewController *photosViewController = [PhotosViewController new];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PhotosViewController" bundle:nil];
+    PhotosViewController *photosViewController = (PhotosViewController *)[storyboard instantiateViewControllerWithIdentifier:@"yoloSwag"];
+    
+//    PhotosViewController *photosViewController = [PhotosViewController new];
     [self.navigationController pushViewController:photosViewController animated:YES];
 }
 
