@@ -88,7 +88,6 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PhotosViewController" bundle:nil];
     PhotosViewController *photosViewController = (PhotosViewController *)[storyboard instantiateViewControllerWithIdentifier:@"yoloSwag"];
     
-//    PhotosViewController *photosViewController = [PhotosViewController new];
     [self.navigationController pushViewController:photosViewController animated:YES];
 }
 
@@ -122,7 +121,8 @@
 -(void)userTappedBlogImage: (UITapGestureRecognizer *)tapGesture{
     [UIView animateWithDuration:0.1 animations:^{self.blogImage.alpha = 0.0;}];
     [UIView animateWithDuration:0.3 animations:^{self.blogImage.alpha = 1.0;}];
-    BlogViewController *blogViewController = [BlogViewController new];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"BlogViewController" bundle:nil];
+    BlogViewController *blogViewController = (BlogViewController *)[storyboard instantiateViewControllerWithIdentifier:@"blogViewController"];
     [self.navigationController pushViewController:blogViewController animated:YES];
 }
 

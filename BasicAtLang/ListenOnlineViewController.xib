@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListenOnlineViewController">
             <connections>
+                <outlet property="onlineWebView" destination="EnL-gn-6qR" id="Nti-4x-9Rh"/>
+                <outlet property="pageController" destination="9hV-WR-t5c" id="a2A-06-OYc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +15,25 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="9hV-WR-t5c">
+                    <rect key="frame" x="0.0" y="531" width="320" height="37"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </pageControl>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EnL-gn-6qR">
+                    <rect key="frame" x="0.0" y="75" width="320" height="456"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9hV-WR-t5c" secondAttribute="trailing" id="84R-eg-rag"/>
+                <constraint firstAttribute="trailing" secondItem="EnL-gn-6qR" secondAttribute="trailing" id="Apw-ZU-6ob"/>
+                <constraint firstItem="9hV-WR-t5c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="L0K-AL-rPq"/>
+                <constraint firstItem="EnL-gn-6qR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="W2x-e1-LKq"/>
+                <constraint firstItem="9hV-WR-t5c" firstAttribute="top" secondItem="EnL-gn-6qR" secondAttribute="bottom" id="XSe-B2-Ewe"/>
+                <constraint firstItem="EnL-gn-6qR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Zfi-8t-3LU"/>
+                <constraint firstAttribute="bottom" secondItem="9hV-WR-t5c" secondAttribute="bottom" id="k8D-7F-y3E"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>

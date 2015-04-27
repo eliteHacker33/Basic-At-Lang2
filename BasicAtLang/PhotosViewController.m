@@ -8,13 +8,13 @@
 
 #import "PhotosViewController.h"
 #import "CustomCell.h"
+#import "FullPhotoViewController.h"
 
 @interface PhotosViewController ()
-//he defines global variables
-
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (nonatomic, strong) NSMutableArray *arrayOfPhotos;
+
+@property (nonatomic, strong) UIImage *currentImage;
 
 @end
 
@@ -27,6 +27,11 @@
     [[self myCollectionView]setDelegate:self];
     [self readFromAFile];
     // Do any additional setup after loading the view from its nib.
+    
+}
+
+- (void)viewDidLayoutSubviews {
+    [self.myCollectionView setContentOffset:CGPointZero animated:NO];
 }
 
 -(NSMutableArray *)arrayOfPhotos{
@@ -36,18 +41,36 @@
     return _arrayOfPhotos;
 }
 
+-(UIImage *)currentImage{
+    if (!_currentImage){
+        _currentImage = [UIImage new];
+    }
+    return _currentImage;
+}
+
 -(void)readFromAFile{
 
 //    NSData *dataWithContent = [NSData dataWithContentsOfURL:url];
 //    [self.arrayOfPhotos addObject:dataWithContent];
     int counter = 1;
     while (YES){
-        NSString *pathName = [NSString stringWithFormat:@"%@%d%@",@"Users/ethanwestering/LayerOfAbstraction/Undergrad Research/photos/individualPhotos/", counter, @".jpg"];
-        UIImage *image = [UIImage imageWithContentsOfFile:pathName];
-        if(image == nil){
-            break;
+
+        if ([[[UIDevice currentDevice]model] isEqualToString:@"iPhone Simulator"]){
+            NSString *pathName = [NSString stringWithFormat:@"Users/ethanwestering/LayerOfAbstraction/Undergrad Research/photos/individualPhotos/%d.jpg",counter];
+            UIImage *image = [UIImage imageWithContentsOfFile:pathName];
+            if(image == nil){
+                break;
+            }
+            [self.arrayOfPhotos addObject:image];
         }
-        [self.arrayOfPhotos addObject:image];
+        else{
+            NSString *imagePath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%d", counter] ofType:@"jpg"];
+            UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+            if(image == nil){
+                break;
+            }
+            [self.arrayOfPhotos addObject:image];
+        }
         counter ++;
     }
 }
@@ -63,15 +86,29 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellName = @"Cell";
     CustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellName forIndexPath:indexPath];
-//    [[cell myImage]setImage:[UIImage imageNamed:[self.arrayOfPhotos objectAtIndex:indexPath.item]]];
+    
     [[cell myImage]setImage:[self.arrayOfPhotos objectAtIndex:indexPath.item]];
-    [self.collectionView.collectionViewLayout invalidateLayout];
+    
     return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.currentImage = [self.arrayOfPhotos objectAtIndex:indexPath.item];
+    FullPhotoViewController *fullPhotoVC = [FullPhotoViewController new];
+    [fullPhotoVC setFullViewImage:self.currentImage];
+    [self.navigationController pushViewController:fullPhotoVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)userTappedImage: (UITapGestureRecognizer *) tapGesture{
+//    FullPhotoViewController *fullPhotoVC = [FullPhotoViewController new];
+//    [fullPhotoVC setFullViewImage:self.currentImage];
+//    fullPhotoVC.fullImageView.image = self.currentImage;
+//    [self.navigationController pushViewController:fullPhotoVC animated:YES];
 }
 
 /*

@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GetInvolvedViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIPageControl *getInvolvedPageController;
+@property (weak, nonatomic) IBOutlet UIWebView *getInvolvedWebView;
 
 @end

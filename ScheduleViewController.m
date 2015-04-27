@@ -9,9 +9,7 @@
 #import "ScheduleViewController.h"
 
 @interface ScheduleViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *imageAttempt1;
-@property (weak, nonatomic) IBOutlet UIImageView *imageAttempt2;
-@property (weak, nonatomic) IBOutlet UIImageView *imageAttempt3;
+
 
 @end
 

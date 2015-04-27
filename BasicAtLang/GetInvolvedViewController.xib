@@ -6,15 +6,36 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GetInvolvedViewController">
             <connections>
+                <outlet property="getInvolvedPageController" destination="VXM-Dv-LPf" id="HLa-3u-PNn"/>
+                <outlet property="getInvolvedWebView" destination="QhE-qr-gSe" id="rmE-Gv-fbx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <subviews>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="VXM-Dv-LPf">
+                    <rect key="frame" x="0.0" y="531" width="320" height="37"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </pageControl>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhE-qr-gSe">
+                    <rect key="frame" x="0.0" y="75" width="320" height="456"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="QhE-qr-gSe" secondAttribute="trailing" id="1gU-YF-aoY"/>
+                <constraint firstItem="VXM-Dv-LPf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2oG-YW-2Ja"/>
+                <constraint firstItem="QhE-qr-gSe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="AW6-99-ale"/>
+                <constraint firstAttribute="bottom" secondItem="VXM-Dv-LPf" secondAttribute="bottom" id="Ck1-zV-uZQ"/>
+                <constraint firstItem="VXM-Dv-LPf" firstAttribute="top" secondItem="QhE-qr-gSe" secondAttribute="bottom" id="LvU-EU-7g6"/>
+                <constraint firstAttribute="trailing" secondItem="VXM-Dv-LPf" secondAttribute="trailing" id="qTF-8d-tlw"/>
+                <constraint firstItem="QhE-qr-gSe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vBF-9K-uDS"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="336" y="386"/>
         </view>
     </objects>

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BlogViewController : UIViewController
+@interface BlogViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
