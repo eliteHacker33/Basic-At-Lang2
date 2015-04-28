@@ -8,13 +8,16 @@
 
 #import "PhotosViewController.h"
 #import "CustomCell.h"
-#import "FullPhotoViewController.h"
 
 @interface PhotosViewController ()
 
 @property (nonatomic, strong) NSMutableArray *arrayOfPhotos;
 
 @property (nonatomic, strong) UIImage *currentImage;
+
+@property (nonatomic)UIView *closeView;
+
+@property (nonatomic)UIImageView *dot;
 
 @end
 
@@ -26,13 +29,13 @@
     [[self myCollectionView]setDataSource:self];
     [[self myCollectionView]setDelegate:self];
     [self readFromAFile];
+    [self.myCollectionView setContentOffset:CGPointZero animated:NO];
     // Do any additional setup after loading the view from its nib.
     
 }
 
-- (void)viewDidLayoutSubviews {
-    [self.myCollectionView setContentOffset:CGPointZero animated:NO];
-}
+//- (void)viewDidLayoutSubviews {
+//}
 
 -(NSMutableArray *)arrayOfPhotos{
     if (!_arrayOfPhotos){
@@ -94,9 +97,25 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     self.currentImage = [self.arrayOfPhotos objectAtIndex:indexPath.item];
-    FullPhotoViewController *fullPhotoVC = [FullPhotoViewController new];
-    [fullPhotoVC setFullViewImage:self.currentImage];
-    [self.navigationController pushViewController:fullPhotoVC animated:YES];
+    float actualHeight = self.currentImage.size.height;
+    float actualWidth = self.currentImage.size.width;
+    float ratio=300/actualWidth;
+    actualHeight = actualHeight*ratio;
+
+    CGRect rect = CGRectMake((self.view.frame.size.width/2),150, 300, actualHeight);
+    self.dot = [[UIImageView alloc]initWithFrame:rect];
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 1.0);
+    [self.currentImage drawInRect:rect];
+    UIGraphicsEndImageContext();
+    self.dot.image=self.currentImage;
+    self.dot.center = self.view.center;
+    self.closeView = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]applicationFrame]];
+    UITapGestureRecognizer *singleFingerTap =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(touchedView:)];
+    [self.closeView addGestureRecognizer:singleFingerTap];
+    [self.view addSubview:self.dot];
+    [self.view addSubview:self.closeView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -104,12 +123,11 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)userTappedImage: (UITapGestureRecognizer *) tapGesture{
-//    FullPhotoViewController *fullPhotoVC = [FullPhotoViewController new];
-//    [fullPhotoVC setFullViewImage:self.currentImage];
-//    fullPhotoVC.fullImageView.image = self.currentImage;
-//    [self.navigationController pushViewController:fullPhotoVC animated:YES];
+-(void)touchedView:(UIGestureRecognizer *)gesture{
+    [self.closeView removeFromSuperview];
+    [self.dot removeFromSuperview];
 }
+
 
 /*
 #pragma mark - Navigation

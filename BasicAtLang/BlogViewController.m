@@ -9,6 +9,7 @@
 #import "BlogViewController.h"
 #import "CustomTableViewCell.h"
 #import "BlogReaderViewController.h"
+#import "Reachability.h"
 
 @interface BlogViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -41,20 +42,22 @@
 
 -(void)blogReader{
     int counter = 0;
-    
     while(YES){
-
-        NSString *pathName = [NSString stringWithFormat:@"http://www.basicatlang.org/blog?start=%d",counter];
-        NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:pathName]];
-        NSData *myData = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
-        NSString *finalRespStr = [[NSString alloc] initWithData:myData encoding:NSUTF8StringEncoding];
-        if ([finalRespStr rangeOfString:@"There are no articles in this category."].location != NSNotFound){
-            break;
-        }
-
-        [self.blogDict setValue:finalRespStr forKey:[NSString stringWithFormat:@"basicBlog%d",counter]];
-        counter ++;
+            NSString *pathName = [NSString stringWithFormat:@"http://www.basicatlang.org/blog?start=%d",counter];
+            NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:pathName]];
+            NSData *myData = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
+            NSString *finalRespStr = [[NSString alloc] initWithData:myData encoding:NSUTF8StringEncoding];
+//            NSString *pathName = [NSString stringWithFormat:@"/Users/ethanwestering/LayerOfAbstraction/Undergrad Research/blogs/BasicBlog%d.html",counter];
+//        NSString *finalRespStr = [NSString stringWithContentsOfFile:pathName encoding:NSStringEncodingConversionAllowLossy error:nil];
+            if ([finalRespStr rangeOfString:@"There are no articles in this category."].location != NSNotFound){
+                break;
+            }
+//            if (finalRespStr == nil) {
+//                break;
+//            }
+            [self.blogDict setValue:finalRespStr forKey:[NSString stringWithFormat:@"basicBlog%d",counter]];
         
+        counter ++;
     }
 
 }

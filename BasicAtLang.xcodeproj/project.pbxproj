@@ -117,6 +117,9 @@
 		189E04D41AEB1009003D8B6C /* FullPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189E04D21AEB1009003D8B6C /* FullPhotoViewController.xib */; };
 		189EC6771AED94BC00D11D8E /* BlogReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EC6751AED94BC00D11D8E /* BlogReaderViewController.m */; };
 		189EC6781AED94BC00D11D8E /* BlogReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189EC6761AED94BC00D11D8E /* BlogReaderViewController.xib */; };
+		18B0BA791AEF174E00434C2D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B0BA741AEF174E00434C2D /* Reachability.m */; };
+		18B0BA7A1AEF174E00434C2D /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B0BA761AEF174E00434C2D /* APLViewController.m */; };
+		18B0BA7B1AEF174E00434C2D /* APLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B0BA781AEF174E00434C2D /* APLAppDelegate.m */; };
 		18E403A71AE9A0B4001BFD95 /* 66.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E403A61AE9A0B4001BFD95 /* 66.jpg */; };
 		18E403AD1AE9F0E2001BFD95 /* PhotosViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E403AC1AE9F0E2001BFD95 /* PhotosViewController.storyboard */; };
 		18E403B01AEA13B1001BFD95 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E403AF1AEA13B1001BFD95 /* CustomCell.m */; };
@@ -265,6 +268,12 @@
 		189EC6741AED94BC00D11D8E /* BlogReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogReaderViewController.h; sourceTree = "<group>"; };
 		189EC6751AED94BC00D11D8E /* BlogReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogReaderViewController.m; sourceTree = "<group>"; };
 		189EC6761AED94BC00D11D8E /* BlogReaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogReaderViewController.xib; sourceTree = "<group>"; };
+		18B0BA731AEF174E00434C2D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		18B0BA741AEF174E00434C2D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		18B0BA751AEF174E00434C2D /* APLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLViewController.h; sourceTree = "<group>"; };
+		18B0BA761AEF174E00434C2D /* APLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLViewController.m; sourceTree = "<group>"; };
+		18B0BA771AEF174E00434C2D /* APLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLAppDelegate.h; sourceTree = "<group>"; };
+		18B0BA781AEF174E00434C2D /* APLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLAppDelegate.m; sourceTree = "<group>"; };
 		18E403A61AE9A0B4001BFD95 /* 66.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 66.jpg; sourceTree = "<group>"; };
 		18E403AC1AE9F0E2001BFD95 /* PhotosViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotosViewController.storyboard; sourceTree = "<group>"; };
 		18E403AE1AEA13B1001BFD95 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
@@ -429,6 +438,7 @@
 				18626E641AA56EAE00CF3B7C /* About/Mission */,
 				18520CA31AE4602F004A0CFD /* AddPostViewController */,
 				189E04D51AEB1012003D8B6C /* FullPhotoViewController */,
+				18B0BA7D1AEF176800434C2D /* Rechability */,
 				18626E461AA561F000CF3B7C /* Images.xcassets */,
 				18F8C87F1AC7308300A1E8D1 /* YouTube@2x.png */,
 				18F8C87D1AC7307900A1E8D1 /* Instagram@2x.png */,
@@ -554,6 +564,19 @@
 				189E04D21AEB1009003D8B6C /* FullPhotoViewController.xib */,
 			);
 			name = FullPhotoViewController;
+			sourceTree = "<group>";
+		};
+		18B0BA7D1AEF176800434C2D /* Rechability */ = {
+			isa = PBXGroup;
+			children = (
+				18B0BA731AEF174E00434C2D /* Reachability.h */,
+				18B0BA741AEF174E00434C2D /* Reachability.m */,
+				18B0BA751AEF174E00434C2D /* APLViewController.h */,
+				18B0BA761AEF174E00434C2D /* APLViewController.m */,
+				18B0BA771AEF174E00434C2D /* APLAppDelegate.h */,
+				18B0BA781AEF174E00434C2D /* APLAppDelegate.m */,
+			);
+			name = Rechability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -752,7 +775,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B0BA7B1AEF174E00434C2D /* APLAppDelegate.m in Sources */,
 				18626E3C1AA561F000CF3B7C /* AppDelegate.m in Sources */,
+				18B0BA7A1AEF174E00434C2D /* APLViewController.m in Sources */,
 				18626E781AA56FF300CF3B7C /* SocialMediaViewController.m in Sources */,
 				18626E871AA5705000CF3B7C /* BlogViewController.m in Sources */,
 				18626E7D1AA5701B00CF3B7C /* ListenOnlineViewController.m in Sources */,
@@ -768,6 +793,7 @@
 				189E04D31AEB1009003D8B6C /* FullPhotoViewController.m in Sources */,
 				18626E821AA5703D00CF3B7C /* PhotosViewController.m in Sources */,
 				186684A41AEC277A0032B360 /* CustomTableViewCell.m in Sources */,
+				18B0BA791AEF174E00434C2D /* Reachability.m in Sources */,
 				18626E3F1AA561F000CF3B7C /* BasicAtLang.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

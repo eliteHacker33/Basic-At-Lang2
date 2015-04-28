@@ -8,10 +8,8 @@
 
 #import "FullPhotoViewController.h"
 
-@interface FullPhotoViewController ()<UIScrollViewDelegate>
+@interface FullPhotoViewController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *fullImageView;
-@property (weak, nonatomic) IBOutlet UIScrollView *zoomView;
 
 @end
 
@@ -29,12 +27,24 @@
 }
 
 -(void)setFullViewImage:(UIImage *)image{
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
+
+    float actualHeight = image.size.height;
+    float actualWidth = image.size.width;
+    float ratio=300/actualWidth;
+    actualHeight = actualHeight*ratio;
     
-    UIImageView *dot =[[UIImageView alloc] initWithFrame:CGRectMake(0, 150, screenWidth, screenHeight - 250)];
+//    CGRect rect = CGRectMake((self.view.frame.size.width/2) - (image.size.width/2), (self.view.frame.size.height/2) - (image.size.height/2), 300, actualHeight);
+
+    CGRect rect = CGRectMake((self.view.frame.size.width/2),150, 300, actualHeight);
+//    UIGraphicsBeginImageContext(rect.size);
+    UIImageView *dot = [[UIImageView alloc]initWithFrame:rect];
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 1.0);
+    [image drawInRect:rect];
+    UIGraphicsEndImageContext();
+    
     dot.image=image;
+    dot.center = self.view.center;
+    
     [self.view addSubview:dot];
 }
 

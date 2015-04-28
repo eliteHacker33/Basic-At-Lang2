@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutMissionViewController">
             <connections>
-                <outlet property="aboutTextView" destination="ALE-WO-fOD" id="WpN-Hx-sHG"/>
+                <outlet property="aboutWebView" destination="fQ6-yv-bJT" id="4ej-59-HhK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,54 +15,17 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ALE-WO-fOD">
-                    <rect key="frame" x="0.0" y="100" width="320" height="468"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <attributedString key="attributedText">
-                        <fragment>
-                            <string key="content">MISSION STATEMENT:
-BASIC is a College-Age Worship Community.
-
-We exist to unite people on campus by helping them join in the work that Jesus is doing in their life and in the lives of others. ALL are welcome.
-
-We accomplish this primarily through Jesus-centered worship, Biblical teaching, small groups, serving others and authentic community.
-
-CORE VALUES:
-Authentic Relationships - We lead with relationships
-Serving Others - We grow when we serve
-Leadership Development - We learn as we lead
-Compelling Worship - Worship isn't just music. It's our whole life.
-
-DISCIPLESHIP MODEL:
-B.L.E.S.S
-
-“Go… to the place I will show you… I will make you into a great nation, and I will bless you… and you will be a blessing (Genesis 12). From the beginning, God’s call for His people has been to be a blessing to the world. He blesses us as we go and we pass along this blessing making Him known and inviting others to join us as His blessed children.
-
-For the last two years we have adopted Dave Ferguson’s BLESS model to love our campuses:
-
-B - Begin with Prayer – ask God how He wants us to bless our neighbors.
-L - Listen – to others pains, struggles, needs.
-E - Eat – with others and get to know them. Great things happen around food.
-S - Serve – as you listen and eat you will hear their needs and can meet them.
-S - Story – hearing their story allows you to know how to share God’s story with them.
-
-God has been growing the hearts of our leaders as well as the numbers of leader and the number of new students being invited to, attending and joining our worship community at BASIC.</string>
-                            <attributes>
-                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQ6-yv-bJT">
+                    <rect key="frame" x="0.0" y="75" width="320" height="493"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="ALE-WO-fOD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="27P-Pu-ikm"/>
-                <constraint firstAttribute="trailing" secondItem="ALE-WO-fOD" secondAttribute="trailing" id="EDC-Jr-mBn"/>
-                <constraint firstItem="ALE-WO-fOD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="F4o-Rk-Of0"/>
-                <constraint firstAttribute="bottom" secondItem="ALE-WO-fOD" secondAttribute="bottom" id="t5V-6r-chB"/>
+                <constraint firstAttribute="trailing" secondItem="fQ6-yv-bJT" secondAttribute="trailing" id="HzQ-t1-vOW"/>
+                <constraint firstItem="fQ6-yv-bJT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PJs-vX-PGg"/>
+                <constraint firstAttribute="bottom" secondItem="fQ6-yv-bJT" secondAttribute="bottom" id="tCR-P4-SPq"/>
+                <constraint firstItem="fQ6-yv-bJT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="ug3-xe-bQV"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="55" y="374"/>

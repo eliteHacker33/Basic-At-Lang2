@@ -7,11 +7,14 @@
 //
 
 #import "ListenOnlineViewController.h"
+#import <SystemConfiguration/SystemConfiguration.h>
+#import "Reachability.h"
 
 
 @interface ListenOnlineViewController ()
 //@property (weak, nonatomic) IBOutlet UITextView *getInvolvedTextView;
 
+@property (nonatomic) NetworkStatus status;
 @end
 
 @implementation ListenOnlineViewController
@@ -20,10 +23,15 @@
     [super viewDidLoad];
     self.title = @"Listen Online";
 
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    [reachability startNotifier];
+    
+    self.status = [reachability currentReachabilityStatus];
+    
+    
     [self.pageController addTarget:self action:@selector(pageDidSwitch:) forControlEvents:UIControlEventValueChanged];
-
+    
     [self pageDidSwitch:self.pageController];
-
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -36,6 +44,64 @@
 }
 
 -(void)pageDidSwitch:(UIPageControl *) page{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    self.status = [reachability currentReachabilityStatus];
+    
+    if(self.status == NotReachable){
+        [self comeHereIfUserHasNoInternetConnection];
+    }
+    else{
+        [self comeHereIfUserHasInternetConnection];
+    }
+}
+
+-(NSString *)createPageForOnlineTeachingForURL:(NSString *)string{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
+    NSData *myData = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
+    NSString *finalRespStr = [[NSString alloc] initWithData:myData encoding:NSUTF8StringEncoding];
+    
+    [defaults setValue:finalRespStr forKey:[NSString stringWithFormat:@"%ld", self.pageController.currentPage]];
+    
+    return finalRespStr;
+}
+
+-(void)comeHereIfUserHasNoInternetConnection{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if(self.pageController.currentPage ==0){
+        [self.onlineWebView loadHTMLString:[defaults valueForKey:[NSString stringWithFormat:@"%ld", self.pageController.currentPage]] baseURL:nil];
+    }
+    else if(self.pageController.currentPage ==1){
+        [self.onlineWebView loadHTMLString:[defaults valueForKey:[NSString stringWithFormat:@"%ld", self.pageController.currentPage]] baseURL:nil];
+    }
+    else if(self.pageController.currentPage ==2){
+        [self.onlineWebView loadHTMLString:[defaults valueForKey:[NSString stringWithFormat:@"%ld", self.pageController.currentPage]] baseURL:nil];
+    }
+    else if(self.pageController.currentPage ==3){
+        [self.onlineWebView loadHTMLString:[defaults valueForKey:[NSString stringWithFormat:@"%ld", self.pageController.currentPage]] baseURL:nil];
+    }
+    else if(self.pageController.currentPage ==4){
+        [self.onlineWebView loadHTMLString:[defaults valueForKey:[NSString stringWithFormat:@"%ld", self.pageController.currentPage]] baseURL:nil];
+    }
+    else if(self.pageController.currentPage ==5){
+        [self.onlineWebView loadHTMLString:[defaults valueForKey:[NSString stringWithFormat:@"%ld", self.pageController.currentPage]] baseURL:nil];
+    }
+    else if(self.pageController.currentPage ==6){
+        [self.onlineWebView loadHTMLString:[defaults valueForKey:[NSString stringWithFormat:@"%ld", self.pageController.currentPage]] baseURL:nil];
+    }
+    else if(self.pageController.currentPage ==7){
+        [self.onlineWebView loadHTMLString:[defaults valueForKey:[NSString stringWithFormat:@"%ld", self.pageController.currentPage]] baseURL:nil];
+    }
+    else if(self.pageController.currentPage ==8){
+        [self.onlineWebView loadHTMLString:[defaults valueForKey:[NSString stringWithFormat:@"%ld", self.pageController.currentPage]] baseURL:nil];
+    }
+    else if(self.pageController.currentPage ==9){
+        [self.onlineWebView loadHTMLString:[defaults valueForKey:[NSString stringWithFormat:@"%ld", self.pageController.currentPage]] baseURL:nil];
+    }
+
+}
+
+-(void)comeHereIfUserHasInternetConnection{
     if(self.pageController.currentPage ==0)
     {
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/76-parables";
@@ -77,13 +143,7 @@
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/40-2013-teachings";
         [self.onlineWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
     }
-}
 
--(NSString *)createPageForOnlineTeachingForURL:(NSString *)string{
-    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
-    NSData *myData = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
-    NSString *finalRespStr = [[NSString alloc] initWithData:myData encoding:NSUTF8StringEncoding];
-    return finalRespStr;
 }
 
 /*

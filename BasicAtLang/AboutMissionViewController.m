@@ -9,7 +9,7 @@
 #import "AboutMissionViewController.h"
 
 @interface AboutMissionViewController ()
-@property (weak, nonatomic) IBOutlet UITextView *aboutTextView;
+@property (weak, nonatomic) IBOutlet UIWebView *aboutWebView;
 
 @end
 
@@ -18,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"About";
+    NSString *pathName = [NSString stringWithFormat:@"http://www.basicatlang.org/about"];
+    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:pathName]];
+    NSData *myData = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
+    NSString *finalRespStr = [[NSString alloc] initWithData:myData encoding:NSUTF8StringEncoding];
+    [self.aboutWebView loadHTMLString:finalRespStr baseURL:nil];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -26,7 +31,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (void)viewDidLayoutSubviews {
-    [self.aboutTextView setContentOffset:CGPointZero animated:NO];
+
 }
 /*
 #pragma mark - Navigation
