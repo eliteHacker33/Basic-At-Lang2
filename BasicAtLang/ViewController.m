@@ -15,6 +15,7 @@
 #import "BlogViewController.h"
 #import "MusicViewController.h"
 #import "GetInvolvedViewController.h"
+#import "LinkSocialMediaViewController.h"
 
 @interface ViewController () <UITabBarDelegate>
 
@@ -27,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *blogImage;
 @property (weak, nonatomic) IBOutlet UIImageView *getInvolvedImage;
 @property (weak, nonatomic) IBOutlet UITabBar *socialMediaTabBar;
+@property (strong, nonatomic) UIWebView *webView;
 
 @end
 
@@ -39,23 +41,80 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+-(void)returnHome: (UITapGestureRecognizer *)gesture{
+    [self.webView removeFromSuperview];
+    self.navigationItem.rightBarButtonItem = nil;
+    self.navigationItem.title = @"Home";
+}
+
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStyleDone target:self action:@selector(returnHome:)];
+
+    self.webView = [[UIWebView alloc]initWithFrame:[[UIScreen mainScreen]applicationFrame]];
+    
     if ([item.title isEqualToString:@"Twitter"]){
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.twitter.com/basicatlang"]];
+        BOOL isAppInstalled=[[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"twitter://basicatlang"]];
+        if (isAppInstalled){
+            [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"twitter://user?screen_name=basicatlang"]];
+        }
+        else{
+            self.navigationItem.title = @"Twitter";
+            self.navigationItem.rightBarButtonItem = rightButton;
+            NSString *string = @"http://www.twitter.com/basicatlang";
+            NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
+            NSData *myData = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
+            NSString *finalRespStr = [[NSString alloc] initWithData:myData encoding:NSUTF8StringEncoding];
+            [self.webView loadHTMLString:finalRespStr baseURL:nil];
+            self.webView.scalesPageToFit = YES;
+            [self.view addSubview:self.webView];
+        }
     }
     else if ([item.title isEqualToString:@"Facebook"]){
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.facebook.com/BasicAtLang"]];
+        BOOL isAppInstalled=[[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"fb://profile/BasicAtLang"]];
+        if (isAppInstalled){
+            [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"fb://profile/355290131231056"]];
+        }
+        else{
+            self.navigationItem.title = @"Facebook";
+            self.navigationItem.rightBarButtonItem = rightButton;
+            NSString *string = @"facebook://user?username=BasicAtLang";
+            NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
+            NSData *myData = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
+            NSString *finalRespStr = [[NSString alloc] initWithData:myData encoding:NSUTF8StringEncoding];
+            [self.webView loadHTMLString:finalRespStr baseURL:nil];
+            self.webView.scalesPageToFit = YES;
+            [self.view addSubview:self.webView];
+        }
     }
     else if ([item.title isEqualToString:@"Instagram"]){
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://instagram.com/basicatlang"]];
+        BOOL isAppInstalled=[[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"instagram://user?username=basicatlang"]];
+        if (isAppInstalled){
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"instagram://user?username=basicatlang"]];
+        }
     }
     else if ([item.title isEqualToString:@"YouTube"]){
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.youtube.com/user/BASICcommunity"]];
+        self.navigationItem.rightBarButtonItem = rightButton;
+        self.navigationItem.title = @"YouTube";
+        BOOL isAppInstalled=[[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"youtube://user/"]];
+        if (isAppInstalled) {
+            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"youtube://www.youtube.com/user/BASICcommunity"]];
+        }
+        else{
+            NSString *string = @"https://www.youtube.com/user/BASICcommunity";
+            NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
+            NSData *myData = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
+            NSString *finalRespStr = [[NSString alloc] initWithData:myData encoding:NSUTF8StringEncoding];
+            [self.webView loadHTMLString:finalRespStr baseURL:nil];
+            self.webView.scalesPageToFit = YES;
+            [self.view addSubview:self.webView];
+        }
     }
 }
 

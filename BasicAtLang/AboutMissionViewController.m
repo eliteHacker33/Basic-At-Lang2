@@ -22,6 +22,10 @@
     NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:pathName]];
     NSData *myData = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
     NSString *finalRespStr = [[NSString alloc] initWithData:myData encoding:NSUTF8StringEncoding];
+//------------------------------------------------------------------
+//    NSString *pathName = [NSString stringWithFormat:@"/Users/ethanwestering/LayerOfAbstraction/Undergrad Research/about/aboutBasic.html"];
+//    NSString *finalRespStr = [NSString stringWithContentsOfFile:pathName encoding:NSStringEncodingConversionAllowLossy error:nil];
+//-------------------------------------------------------------------
     [self.aboutWebView loadHTMLString:finalRespStr baseURL:nil];
     // Do any additional setup after loading the view from its nib.
 }

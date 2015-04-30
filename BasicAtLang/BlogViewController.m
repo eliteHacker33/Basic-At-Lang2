@@ -47,14 +47,18 @@
             NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:pathName]];
             NSData *myData = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
             NSString *finalRespStr = [[NSString alloc] initWithData:myData encoding:NSUTF8StringEncoding];
-//            NSString *pathName = [NSString stringWithFormat:@"/Users/ethanwestering/LayerOfAbstraction/Undergrad Research/blogs/BasicBlog%d.html",counter];
+        
+//---------------------------------------------------------------------
+//        NSString *pathName = [NSString stringWithFormat:@"/Users/ethanwestering/LayerOfAbstraction/Undergrad Research/blogs/BasicBlog%d.html",counter];
 //        NSString *finalRespStr = [NSString stringWithContentsOfFile:pathName encoding:NSStringEncodingConversionAllowLossy error:nil];
+//---------------------------------------------------------------------
+        
             if ([finalRespStr rangeOfString:@"There are no articles in this category."].location != NSNotFound){
                 break;
             }
-//            if (finalRespStr == nil) {
-//                break;
-//            }
+            if (finalRespStr == nil) {
+                break;
+            }
             [self.blogDict setValue:finalRespStr forKey:[NSString stringWithFormat:@"basicBlog%d",counter]];
         
         counter ++;
@@ -81,12 +85,22 @@
         cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
+//    cell.blogLabel.text = [NSString stringWithFormat: @"Basic Blog %ld",indexPath.item + 1];
+
+//---------------------------------------------------------------------
     cell.blogLabel.text = [NSString stringWithFormat: @"Basic Blog %ld",indexPath.item + 1];
+//---------------------------------------------------------------------
+    
+    
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *file = [self.blogDict valueForKey:[NSString stringWithFormat:@"basicBlog%ld", indexPath.item]];
+//---------------------------------------------------------------------
+//        NSString *file = [self.blogDict valueForKey:[NSString stringWithFormat:@"basicBlog%ld", indexPath.item + 1]];
+//---------------------------------------------------------------------
+    
     BlogReaderViewController *brvc = [BlogReaderViewController new];
     [brvc setTextOnBlogTextView:file];
 //    brvc.blogTextView.text = file;

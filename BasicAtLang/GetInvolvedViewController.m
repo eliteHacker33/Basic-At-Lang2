@@ -35,26 +35,47 @@
     {
         NSString *parableURL = @"http://www.basicatlang.org/get-involved/ministries";
         [self.getInvolvedWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//----------------------------------------------------
+//        [self.getInvolvedWebView loadHTMLString:[self getLoadInGetInvolved] baseURL:nil];
+//----------------------------------------------------
+        
     }
     else if(self.getInvolvedPageController.currentPage ==1){
         NSString *parableURL = @"http://www.basicatlang.org/get-involved/basic-teams";
         [self.getInvolvedWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//----------------------------------------------------
+//        [self.getInvolvedWebView loadHTMLString:[self getLoadInGetInvolved] baseURL:nil];
+//----------------------------------------------------
     }
     else if(self.getInvolvedPageController.currentPage ==2){
         NSString *parableURL = @"http://www.basicatlang.org/get-involved/life-groups";
-        self.getInvolvedWebView.scalesPageToFit = YES;
         [self.getInvolvedWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
-//        self.getInvolvedWebView.scalesPageToFit = YES;
+//----------------------------------------------------
+//        [self.getInvolvedWebView loadHTMLString:[self getLoadInGetInvolved] baseURL:nil];
+//----------------------------------------------------
+
     }
     else if(self.getInvolvedPageController.currentPage ==3){
         NSString *parableURL = @"http://www.basicatlang.org/get-involved/sunday-morning";
         [self.getInvolvedWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//----------------------------------------------------
+//        [self.getInvolvedWebView loadHTMLString:[self getLoadInGetInvolved] baseURL:nil];
+//----------------------------------------------------
     }
     else if(self.getInvolvedPageController.currentPage ==4){
         NSString *parableURL = @"http://www.basicatlang.org/get-involved/32-upcoming-basic-events";
         [self.getInvolvedWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//----------------------------------------------------
+//        [self.getInvolvedWebView loadHTMLString:[self getLoadInGetInvolved] baseURL:nil];
+//----------------------------------------------------
     }
 
+}
+
+-(NSString *)getLoadInGetInvolved{
+    NSString *pathName = [NSString stringWithFormat:@"/Users/ethanwestering/LayerOfAbstraction/Undergrad Research/getInvolved/individualGetInvolved/getInvolved%ld.html", self.getInvolvedPageController.currentPage];
+    NSString *finalRespStr = [NSString stringWithContentsOfFile:pathName encoding:NSStringEncodingConversionAllowLossy error:nil];
+    return finalRespStr;
 }
 
 -(NSString *)createPageForOnlineTeachingForURL:(NSString *)string{

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		184648671AAD3FA800906C58 /* GetInvolvedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184648651AAD3FA800906C58 /* GetInvolvedViewController.m */; };
 		184648681AAD3FA800906C58 /* GetInvolvedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184648661AAD3FA800906C58 /* GetInvolvedViewController.xib */; };
+		1851721C1AF1EF3E00DB8163 /* LinkSocialMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851721A1AF1EF3E00DB8163 /* LinkSocialMediaViewController.m */; };
+		1851721D1AF1EF3E00DB8163 /* LinkSocialMediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1851721B1AF1EF3E00DB8163 /* LinkSocialMediaViewController.xib */; };
 		18520CA71AE4606C004A0CFD /* AddPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18520CA51AE4606C004A0CFD /* AddPostViewController.m */; };
 		18520CA81AE4606C004A0CFD /* AddPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18520CA61AE4606C004A0CFD /* AddPostViewController.xib */; };
 		185BFECC1AEB50230080007F /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 185BFE7C1AEB50230080007F /* 1.jpg */; };
@@ -143,6 +145,9 @@
 		184648641AAD3FA800906C58 /* GetInvolvedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetInvolvedViewController.h; sourceTree = "<group>"; };
 		184648651AAD3FA800906C58 /* GetInvolvedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetInvolvedViewController.m; sourceTree = "<group>"; };
 		184648661AAD3FA800906C58 /* GetInvolvedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetInvolvedViewController.xib; sourceTree = "<group>"; };
+		185172191AF1EF3E00DB8163 /* LinkSocialMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkSocialMediaViewController.h; sourceTree = "<group>"; };
+		1851721A1AF1EF3E00DB8163 /* LinkSocialMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkSocialMediaViewController.m; sourceTree = "<group>"; };
+		1851721B1AF1EF3E00DB8163 /* LinkSocialMediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinkSocialMediaViewController.xib; sourceTree = "<group>"; };
 		18520CA41AE4606C004A0CFD /* AddPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPostViewController.h; sourceTree = "<group>"; };
 		18520CA51AE4606C004A0CFD /* AddPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPostViewController.m; sourceTree = "<group>"; };
 		18520CA61AE4606C004A0CFD /* AddPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPostViewController.xib; sourceTree = "<group>"; };
@@ -312,6 +317,16 @@
 			name = GetInvolved;
 			sourceTree = "<group>";
 		};
+		1851721E1AF1EF4600DB8163 /* LinkSocialMediaViewController */ = {
+			isa = PBXGroup;
+			children = (
+				185172191AF1EF3E00DB8163 /* LinkSocialMediaViewController.h */,
+				1851721A1AF1EF3E00DB8163 /* LinkSocialMediaViewController.m */,
+				1851721B1AF1EF3E00DB8163 /* LinkSocialMediaViewController.xib */,
+			);
+			name = LinkSocialMediaViewController;
+			sourceTree = "<group>";
+		};
 		18520CA31AE4602F004A0CFD /* AddPostViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +443,7 @@
 				18626E401AA561F000CF3B7C /* ViewController.h */,
 				18626E411AA561F000CF3B7C /* ViewController.m */,
 				18626E431AA561F000CF3B7C /* Main.storyboard */,
+				1851721E1AF1EF4600DB8163 /* LinkSocialMediaViewController */,
 				184648691AAD3FB100906C58 /* GetInvolved */,
 				18626E741AA56F8C00CF3B7C /* Music */,
 				18626E731AA56F8000CF3B7C /* Blog */,
@@ -745,6 +761,7 @@
 				185BFEEB1AEB50230080007F /* 32.jpg in Resources */,
 				184648681AAD3FA800906C58 /* GetInvolvedViewController.xib in Resources */,
 				185BFEF41AEB50230080007F /* 41.jpg in Resources */,
+				1851721D1AF1EF3E00DB8163 /* LinkSocialMediaViewController.xib in Resources */,
 				185BFEDE1AEB50230080007F /* 19.jpg in Resources */,
 				185BFED01AEB50230080007F /* 5.jpg in Resources */,
 				18F8C8801AC7308300A1E8D1 /* YouTube@2x.png in Resources */,
@@ -794,6 +811,7 @@
 				18626E821AA5703D00CF3B7C /* PhotosViewController.m in Sources */,
 				186684A41AEC277A0032B360 /* CustomTableViewCell.m in Sources */,
 				18B0BA791AEF174E00434C2D /* Reachability.m in Sources */,
+				1851721C1AF1EF3E00DB8163 /* LinkSocialMediaViewController.m in Sources */,
 				18626E3F1AA561F000CF3B7C /* BasicAtLang.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

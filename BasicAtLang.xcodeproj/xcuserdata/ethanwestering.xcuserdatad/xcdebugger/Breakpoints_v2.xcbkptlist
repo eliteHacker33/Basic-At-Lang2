@@ -26,28 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BasicAtLang/BlogViewController.m"
-            timestampString = "451882348.534769"
+            timestampString = "452048218.845482"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-blogReader"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BasicAtLang/BlogViewController.m"
-            timestampString = "451884906.33402"
+            filePath = "LinkSocialMediaViewController.m"
+            timestampString = "452062106.366213"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-setLinkSocialMediaViewContent:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

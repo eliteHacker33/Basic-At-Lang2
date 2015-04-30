@@ -28,7 +28,6 @@
     
     self.status = [reachability currentReachabilityStatus];
     
-    
     [self.pageController addTarget:self action:@selector(pageDidSwitch:) forControlEvents:UIControlEventValueChanged];
     
     [self pageDidSwitch:self.pageController];
@@ -106,44 +105,87 @@
     {
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/76-parables";
         [self.onlineWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//---------------------------------------------------------------------
+    //    [self.onlineWebView loadHTMLString:[self finalResponseString] baseURL:nil];
+//---------------------------------------------------------------------
+//        
+
+        
     }
     else if(self.pageController.currentPage ==1){
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/85-maundythursday";
         [self.onlineWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+        
+//---------------------------------------------------------------------
+//        [self.onlineWebView loadHTMLString:[self finalResponseString] baseURL:nil];
+//---------------------------------------------------------------------
+        
     }
     else if(self.pageController.currentPage ==2){
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/75-faithanddoubt";
         [self.onlineWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//---------------------------------------------------------------------
+    //    [self.onlineWebView loadHTMLString:[self finalResponseString] baseURL:nil];
+//---------------------------------------------------------------------
+        
     }
     else if(self.pageController.currentPage ==3){
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/69-identity";
         [self.onlineWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//---------------------------------------------------------------------
+//        [self.onlineWebView loadHTMLString:[self finalResponseString] baseURL:nil];
+//---------------------------------------------------------------------
+        
     }
     else if(self.pageController.currentPage ==4){
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/44-shoot-christians-say";
         [self.onlineWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//---------------------------------------------------------------------
+//        [self.onlineWebView loadHTMLString:[self finalResponseString] baseURL:nil];
+//---------------------------------------------------------------------
     }
     else if(self.pageController.currentPage ==5){
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/72-spoken-word";
         [self.onlineWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//---------------------------------------------------------------------
+//        [self.onlineWebView loadHTMLString:[self finalResponseString] baseURL:nil];
+//---------------------------------------------------------------------
     }
     else if(self.pageController.currentPage ==6){
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/43-the-walking-dead";
         [self.onlineWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//---------------------------------------------------------------------
+//        [self.onlineWebView loadHTMLString:[self finalResponseString] baseURL:nil];
+//---------------------------------------------------------------------
     }
     else if(self.pageController.currentPage ==7){
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/41-bless";
         [self.onlineWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//---------------------------------------------------------------------
+//        [self.onlineWebView loadHTMLString:[self finalResponseString] baseURL:nil];
+//---------------------------------------------------------------------
     }
     else if(self.pageController.currentPage ==8){
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/42-stories-from-the-seats";
         [self.onlineWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//---------------------------------------------------------------------
+//        [self.onlineWebView loadHTMLString:[self finalResponseString] baseURL:nil];
+//---------------------------------------------------------------------
     }
     else if(self.pageController.currentPage ==9){
         NSString *parableURL = @"http://www.basicatlang.org/media-center/listen-online/40-2013-teachings";
         [self.onlineWebView loadHTMLString:[self createPageForOnlineTeachingForURL:parableURL] baseURL:nil];
+//---------------------------------------------------------------------
+//        [self.onlineWebView loadHTMLString:[self finalResponseString] baseURL:nil];
+//---------------------------------------------------------------------
     }
 
+}
+
+- (NSString *)finalResponseString{
+    NSString *pathName = [NSString stringWithFormat:@"/Users/ethanwestering/LayerOfAbstraction/Undergrad Research/onlineTeachings/individualOnlineTeachings/onlineTeaching%ld.html",self.pageController.currentPage];
+    NSString *finalRespStr = [NSString stringWithContentsOfFile:pathName encoding:NSStringEncodingConversionAllowLossy error:nil];
+    return finalRespStr;
 }
 
 /*
