@@ -12,7 +12,7 @@
 #import "FullPostViewController.h"
 
 @interface SocialMediaViewController ()
-
+@property (strong, nonatomic) UIImageView *fullPostImageView;
 @end
 
 @implementation SocialMediaViewController
@@ -68,14 +68,12 @@
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    FullPostViewController *fpvc = [FullPostViewController new];
-    [self.navigationController pushViewController:fpvc animated:YES];
-    
     NSArray *pictures = [defaults valueForKey:@"socialPosts"];
     NSData *imageData = pictures[indexPath.item];
     UIImage* image = [UIImage imageWithData:imageData];
+    NSArray *text = [defaults valueForKey:@"textPosts"];
     
     float actualHeight = image.size.height;
     float actualWidth = image.size.width;
@@ -83,12 +81,20 @@
     actualHeight = actualHeight*ratio;
     
     CGRect rect = CGRectMake((self.view.frame.size.width/2),150, 300, actualHeight);
-    fpvc.fullPostImageView = [[UIImageView alloc]initWithFrame:rect];
+    self.fullPostImageView = [[UIImageView alloc]initWithFrame:rect];
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 1.0);
-    [self.currentImage drawInRect:rect];
+    [image drawInRect:rect];
     UIGraphicsEndImageContext();
-    self.dot.image=self.currentImage;
-    self.dot.center = self.view.center;
+    self.fullPostImageView.image=image;
+//    self.fullPostImageView.center = self.view.center;
+    self.fullPostImageView.center = CGPointMake(self.view.frame.size.width  / 2,
+                                                self.view.frame.size.height /2 - 100);
+    FullPostViewController *fpvc = [[FullPostViewController alloc]initWithNibName:@"FullPostViewController" bundle:nil];
+    [fpvc view];
+    [fpvc.fullPostScrollView addSubview:self.fullPostImageView];
+    fpvc.fullPostTextView.text = text[indexPath.item];
+    [self.navigationController pushViewController:fpvc animated:YES];
+    
 }
 
 

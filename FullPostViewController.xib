@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullPostViewController">
             <connections>
-                <outlet property="fullPostImageView" destination="fBt-NR-ete" id="Ufi-Si-63G"/>
+                <outlet property="fullPostScrollView" destination="OTd-vt-wd3" id="b7b-m7-T0h"/>
                 <outlet property="fullPostTextView" destination="f9b-Ae-S8K" id="fcq-9E-QMM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -16,17 +16,30 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9b-Ae-S8K">
-                    <rect key="frame" x="0.0" y="323" width="320" height="212"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTd-vt-wd3">
+                    <rect key="frame" x="0.0" y="20" width="320" height="303"/>
+                </scrollView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9b-Ae-S8K">
+                    <rect key="frame" x="0.0" y="323" width="320" height="245"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="245" id="rSa-7J-6EA"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBt-NR-ete">
-                    <rect key="frame" x="40" y="84" width="240" height="128"/>
-                </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OTd-vt-wd3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1yO-iI-g4m"/>
+                <constraint firstItem="f9b-Ae-S8K" firstAttribute="top" secondItem="OTd-vt-wd3" secondAttribute="bottom" id="9CM-un-dZv"/>
+                <constraint firstItem="OTd-vt-wd3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="DW4-me-kuG"/>
+                <constraint firstAttribute="trailing" secondItem="f9b-Ae-S8K" secondAttribute="trailing" id="Fjk-RU-ELD"/>
+                <constraint firstAttribute="trailing" secondItem="OTd-vt-wd3" secondAttribute="trailing" id="HD0-bH-JqL"/>
+                <constraint firstItem="f9b-Ae-S8K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Tgf-Td-m6A"/>
+                <constraint firstItem="f9b-Ae-S8K" firstAttribute="top" secondItem="OTd-vt-wd3" secondAttribute="bottom" id="cXE-vy-xIM"/>
+                <constraint firstAttribute="bottom" secondItem="f9b-Ae-S8K" secondAttribute="bottom" id="wGy-HW-LH2"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
