@@ -15,7 +15,7 @@
 #import "BlogViewController.h"
 #import "MusicViewController.h"
 #import "GetInvolvedViewController.h"
-#import "LinkSocialMediaViewController.h"
+//#import "LinkSocialMediaViewController.h"
 
 @interface ViewController () <UITabBarDelegate>
 
@@ -134,7 +134,8 @@
 {
     [UIView animateWithDuration:0.1 animations:^{self.socialMediaImage.alpha = 0.0;}];
     [UIView animateWithDuration:0.3 animations:^{self.socialMediaImage.alpha = 1.0;}];
-    SocialMediaViewController *socialMediaController = [SocialMediaViewController new];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SocialMediaViewController" bundle:nil];
+    SocialMediaViewController *socialMediaController = (SocialMediaViewController *)[storyboard instantiateViewControllerWithIdentifier:@"socialMediaStoryBoard"];
     [self.navigationController pushViewController:socialMediaController animated:YES];
 }
 

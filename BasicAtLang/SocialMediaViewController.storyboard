@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Social Media View Controller-->
+        <scene sceneID="cWc-pC-KiX">
+            <objects>
+                <viewController storyboardIdentifier="socialMediaStoryBoard" id="X3d-C4-hgN" customClass="SocialMediaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BcM-sW-xnj"/>
+                        <viewControllerLayoutGuide type="bottom" id="LNE-7e-lvk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zgp-qy-SLe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="p7t-WM-82S">
+                                <rect key="frame" x="16" y="95" width="288" height="383"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mrCell" rowHeight="78" id="ug9-k2-7cc" customClass="CustomSocialMediaTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ug9-k2-7cc" id="9GD-5o-8b3">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5o-w6-Ln3">
+                                                    <rect key="frame" x="109" y="8" width="171" height="61"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e6r-ee-dBR">
+                                                    <rect key="frame" x="8" y="4" width="84" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="84" id="gkq-Te-2fD"/>
+                                                        <constraint firstAttribute="height" constant="70" id="liM-g7-toI"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="J5o-w6-Ln3" firstAttribute="bottom" secondItem="9GD-5o-8b3" secondAttribute="bottomMargin" id="5Gm-Wg-7ZB"/>
+                                                <constraint firstItem="e6r-ee-dBR" firstAttribute="leading" secondItem="9GD-5o-8b3" secondAttribute="leadingMargin" id="Baq-y2-xiV"/>
+                                                <constraint firstItem="J5o-w6-Ln3" firstAttribute="leading" secondItem="e6r-ee-dBR" secondAttribute="trailing" constant="17" id="DFz-27-7rL"/>
+                                                <constraint firstItem="J5o-w6-Ln3" firstAttribute="trailing" secondItem="9GD-5o-8b3" secondAttribute="trailingMargin" id="Hsv-XP-ecI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="e6r-ee-dBR" secondAttribute="bottom" constant="-5" id="LPo-Id-npU"/>
+                                                <constraint firstItem="J5o-w6-Ln3" firstAttribute="top" secondItem="9GD-5o-8b3" secondAttribute="topMargin" id="R90-EL-98c"/>
+                                                <constraint firstItem="e6r-ee-dBR" firstAttribute="top" secondItem="9GD-5o-8b3" secondAttribute="topMargin" constant="-4" id="ncu-kw-t3b"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="e6r-ee-dBR" id="LGX-el-P3m"/>
+                                            <outlet property="cellTextView" destination="J5o-w6-Ln3" id="nw8-b7-zbX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="X3d-C4-hgN" id="pz1-Ph-L5l"/>
+                                    <outlet property="delegate" destination="X3d-C4-hgN" id="xLH-uF-7oj"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqd-iC-3kg">
+                                <rect key="frame" x="127" y="518" width="177" height="30"/>
+                                <state key="normal" title="Share Basic Story/Photos">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToStoryView:" destination="X3d-C4-hgN" eventType="touchUpInside" id="bt1-lB-CTH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p7t-WM-82S" firstAttribute="leading" secondItem="zgp-qy-SLe" secondAttribute="leadingMargin" id="GMY-P6-8QV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p7t-WM-82S" secondAttribute="trailing" id="HLA-d6-9e6"/>
+                            <constraint firstItem="LNE-7e-lvk" firstAttribute="top" secondItem="yqd-iC-3kg" secondAttribute="bottom" constant="20" id="KCx-cO-dtO"/>
+                            <constraint firstItem="yqd-iC-3kg" firstAttribute="top" secondItem="p7t-WM-82S" secondAttribute="bottom" constant="40" id="RB4-Qh-ciC"/>
+                            <constraint firstItem="p7t-WM-82S" firstAttribute="top" secondItem="BcM-sW-xnj" secondAttribute="bottom" constant="75" id="fJt-6r-8Ni"/>
+                            <constraint firstItem="yqd-iC-3kg" firstAttribute="trailing" secondItem="zgp-qy-SLe" secondAttribute="trailingMargin" id="gAB-iF-dSG"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="socialPostsTableView" destination="p7t-WM-82S" id="lnq-yF-g2K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Thy-04-HqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="279"/>
+        </scene>
+    </scenes>
+</document>

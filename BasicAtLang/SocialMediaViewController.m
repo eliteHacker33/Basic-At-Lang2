@@ -8,10 +8,10 @@
 
 #import "SocialMediaViewController.h"
 #import "AddPostViewController.h"
+#import "CustomSocialMediaTableViewCell.h"
+#import "FullPostViewController.h"
 
 @interface SocialMediaViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UITextView *socialMediaPrompt;
 
 @end
 
@@ -20,9 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Social Media";
-    [self.socialMediaPrompt setContentOffset:CGPointZero animated:NO];
-
+    self.socialPostsTableView.delegate = self;
+    self.socialPostsTableView.dataSource = self;
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self.socialPostsTableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,6 +37,60 @@
     AddPostViewController *addPostViewController = [AddPostViewController new];
     [self.navigationController pushViewController:addPostViewController animated:YES];
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *itemsArray = [defaults valueForKey:@"socialPosts"];
+    return [itemsArray count];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellIdentifier = @"mrCell";
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    CustomSocialMediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[CustomSocialMediaTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    NSArray *pictures = [defaults valueForKey:@"socialPosts"];
+    NSData *imageData = pictures[indexPath.item];
+    UIImage* image = [UIImage imageWithData:imageData];
+    cell.cellImageView.image = image;
+    NSArray *text = [defaults valueForKey:@"textPosts"];
+    cell.cellTextView.text = text[indexPath.item];
+    
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    FullPostViewController *fpvc = [FullPostViewController new];
+    [self.navigationController pushViewController:fpvc animated:YES];
+    
+    NSArray *pictures = [defaults valueForKey:@"socialPosts"];
+    NSData *imageData = pictures[indexPath.item];
+    UIImage* image = [UIImage imageWithData:imageData];
+    
+    float actualHeight = image.size.height;
+    float actualWidth = image.size.width;
+    float ratio=300/actualWidth;
+    actualHeight = actualHeight*ratio;
+    
+    CGRect rect = CGRectMake((self.view.frame.size.width/2),150, 300, actualHeight);
+    fpvc.fullPostImageView = [[UIImageView alloc]initWithFrame:rect];
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 1.0);
+    [self.currentImage drawInRect:rect];
+    UIGraphicsEndImageContext();
+    self.dot.image=self.currentImage;
+    self.dot.center = self.view.center;
+}
+
 
 /*
 #pragma mark - Navigation

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SocialMediaViewController.h"
 
-@interface SocialMediaViewController : UIViewController
+@interface SocialMediaViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *socialPostsTableView;
 
 @end

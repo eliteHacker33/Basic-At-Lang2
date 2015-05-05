@@ -106,7 +106,6 @@
 		18626E6D1AA56F0400CF3B7C /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E6B1AA56F0400CF3B7C /* ScheduleViewController.m */; };
 		18626E6E1AA56F0400CF3B7C /* ScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E6C1AA56F0400CF3B7C /* ScheduleViewController.xib */; };
 		18626E781AA56FF300CF3B7C /* SocialMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E761AA56FF300CF3B7C /* SocialMediaViewController.m */; };
-		18626E791AA56FF300CF3B7C /* SocialMediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E771AA56FF300CF3B7C /* SocialMediaViewController.xib */; };
 		18626E7D1AA5701B00CF3B7C /* ListenOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E7B1AA5701B00CF3B7C /* ListenOnlineViewController.m */; };
 		18626E7E1AA5701B00CF3B7C /* ListenOnlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E7C1AA5701B00CF3B7C /* ListenOnlineViewController.xib */; };
 		18626E821AA5703D00CF3B7C /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E801AA5703D00CF3B7C /* PhotosViewController.m */; };
@@ -122,6 +121,10 @@
 		18B0BA791AEF174E00434C2D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B0BA741AEF174E00434C2D /* Reachability.m */; };
 		18B0BA7A1AEF174E00434C2D /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B0BA761AEF174E00434C2D /* APLViewController.m */; };
 		18B0BA7B1AEF174E00434C2D /* APLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B0BA781AEF174E00434C2D /* APLAppDelegate.m */; };
+		18B7A1081AF8462B00F8F4E5 /* CustomSocialMediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7A1071AF8462B00F8F4E5 /* CustomSocialMediaTableViewCell.m */; };
+		18B7A10A1AF85AED00F8F4E5 /* SocialMediaViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B7A1091AF85AED00F8F4E5 /* SocialMediaViewController.storyboard */; };
+		18B7A1111AF87A7100F8F4E5 /* FullPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7A10F1AF87A7100F8F4E5 /* FullPostViewController.m */; };
+		18B7A1121AF87A7100F8F4E5 /* FullPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B7A1101AF87A7100F8F4E5 /* FullPostViewController.xib */; };
 		18E403A71AE9A0B4001BFD95 /* 66.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E403A61AE9A0B4001BFD95 /* 66.jpg */; };
 		18E403AD1AE9F0E2001BFD95 /* PhotosViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E403AC1AE9F0E2001BFD95 /* PhotosViewController.storyboard */; };
 		18E403B01AEA13B1001BFD95 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E403AF1AEA13B1001BFD95 /* CustomCell.m */; };
@@ -253,7 +256,6 @@
 		18626E6C1AA56F0400CF3B7C /* ScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleViewController.xib; sourceTree = "<group>"; };
 		18626E751AA56FF300CF3B7C /* SocialMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaViewController.h; sourceTree = "<group>"; };
 		18626E761AA56FF300CF3B7C /* SocialMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaViewController.m; sourceTree = "<group>"; };
-		18626E771AA56FF300CF3B7C /* SocialMediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialMediaViewController.xib; sourceTree = "<group>"; };
 		18626E7A1AA5701B00CF3B7C /* ListenOnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenOnlineViewController.h; sourceTree = "<group>"; };
 		18626E7B1AA5701B00CF3B7C /* ListenOnlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenOnlineViewController.m; sourceTree = "<group>"; };
 		18626E7C1AA5701B00CF3B7C /* ListenOnlineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListenOnlineViewController.xib; sourceTree = "<group>"; };
@@ -279,6 +281,12 @@
 		18B0BA761AEF174E00434C2D /* APLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLViewController.m; sourceTree = "<group>"; };
 		18B0BA771AEF174E00434C2D /* APLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLAppDelegate.h; sourceTree = "<group>"; };
 		18B0BA781AEF174E00434C2D /* APLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLAppDelegate.m; sourceTree = "<group>"; };
+		18B7A1061AF8462B00F8F4E5 /* CustomSocialMediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSocialMediaTableViewCell.h; sourceTree = "<group>"; };
+		18B7A1071AF8462B00F8F4E5 /* CustomSocialMediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSocialMediaTableViewCell.m; sourceTree = "<group>"; };
+		18B7A1091AF85AED00F8F4E5 /* SocialMediaViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SocialMediaViewController.storyboard; sourceTree = "<group>"; };
+		18B7A10E1AF87A7100F8F4E5 /* FullPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FullPostViewController.h; path = ../FullPostViewController.h; sourceTree = "<group>"; };
+		18B7A10F1AF87A7100F8F4E5 /* FullPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FullPostViewController.m; path = ../FullPostViewController.m; sourceTree = "<group>"; };
+		18B7A1101AF87A7100F8F4E5 /* FullPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FullPostViewController.xib; path = ../FullPostViewController.xib; sourceTree = "<group>"; };
 		18E403A61AE9A0B4001BFD95 /* 66.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 66.jpg; sourceTree = "<group>"; };
 		18E403AC1AE9F0E2001BFD95 /* PhotosViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotosViewController.storyboard; sourceTree = "<group>"; };
 		18E403AE1AEA13B1001BFD95 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
@@ -517,9 +525,14 @@
 		18626E701AA56F3E00CF3B7C /* SocialMedia */ = {
 			isa = PBXGroup;
 			children = (
+				18B7A10E1AF87A7100F8F4E5 /* FullPostViewController.h */,
+				18B7A10F1AF87A7100F8F4E5 /* FullPostViewController.m */,
+				18B7A1101AF87A7100F8F4E5 /* FullPostViewController.xib */,
 				18626E751AA56FF300CF3B7C /* SocialMediaViewController.h */,
 				18626E761AA56FF300CF3B7C /* SocialMediaViewController.m */,
-				18626E771AA56FF300CF3B7C /* SocialMediaViewController.xib */,
+				18B7A1061AF8462B00F8F4E5 /* CustomSocialMediaTableViewCell.h */,
+				18B7A1071AF8462B00F8F4E5 /* CustomSocialMediaTableViewCell.m */,
+				18B7A1091AF85AED00F8F4E5 /* SocialMediaViewController.storyboard */,
 			);
 			name = SocialMedia;
 			sourceTree = "<group>";
@@ -719,9 +732,11 @@
 				185BFEDB1AEB50230080007F /* 16.jpg in Resources */,
 				185BFEDC1AEB50230080007F /* 17.jpg in Resources */,
 				185BFEF11AEB50230080007F /* 38.jpg in Resources */,
+				18B7A10A1AF85AED00F8F4E5 /* SocialMediaViewController.storyboard in Resources */,
 				185BFEE71AEB50230080007F /* 28.jpg in Resources */,
 				185BFF001AEB50230080007F /* 53.jpg in Resources */,
 				185BFED21AEB50230080007F /* 7.jpg in Resources */,
+				18B7A1121AF87A7100F8F4E5 /* FullPostViewController.xib in Resources */,
 				185BFF071AEB50230080007F /* 60.jpg in Resources */,
 				185BFEF91AEB50230080007F /* 46.jpg in Resources */,
 				185BFF021AEB50230080007F /* 55.jpg in Resources */,
@@ -767,7 +782,6 @@
 				18F8C8801AC7308300A1E8D1 /* YouTube@2x.png in Resources */,
 				185BFF131AEB50230080007F /* 72.jpg in Resources */,
 				185BFEE31AEB50230080007F /* 24.jpg in Resources */,
-				18626E791AA56FF300CF3B7C /* SocialMediaViewController.xib in Resources */,
 				185BFF121AEB50230080007F /* 71.jpg in Resources */,
 				185BFF0A1AEB50230080007F /* 63.jpg in Resources */,
 				18626E691AA56EEF00CF3B7C /* AboutMissionViewController.xib in Resources */,
@@ -792,8 +806,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B7A1111AF87A7100F8F4E5 /* FullPostViewController.m in Sources */,
 				18B0BA7B1AEF174E00434C2D /* APLAppDelegate.m in Sources */,
 				18626E3C1AA561F000CF3B7C /* AppDelegate.m in Sources */,
+				18B7A1081AF8462B00F8F4E5 /* CustomSocialMediaTableViewCell.m in Sources */,
 				18B0BA7A1AEF174E00434C2D /* APLViewController.m in Sources */,
 				18626E781AA56FF300CF3B7C /* SocialMediaViewController.m in Sources */,
 				18626E871AA5705000CF3B7C /* BlogViewController.m in Sources */,
