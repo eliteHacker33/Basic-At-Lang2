@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FullPostViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface FullPostViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextView *fullPostTextView;
 @property (weak, nonatomic) IBOutlet UIScrollView *fullPostScrollView;

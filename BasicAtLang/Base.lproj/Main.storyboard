@@ -39,7 +39,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5y-N9-wSh" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NmV-XK-FPR">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutBasic.png" translatesAutoresizingMaskIntoConstraints="NO" id="NmV-XK-FPR">
                                                 <rect key="frame" x="20" y="36" width="125" height="125"/>
                                                 <color key="backgroundColor" red="1" green="0.85736000170000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -47,7 +47,7 @@
                                                     <constraint firstAttribute="height" constant="125" id="MLZ-IA-DLa"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bob-ZR-7Fs">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schedulePic.png" translatesAutoresizingMaskIntoConstraints="NO" id="bob-ZR-7Fs">
                                                 <rect key="frame" x="230" y="36" width="125" height="125"/>
                                                 <color key="backgroundColor" red="1" green="0.85736000170000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -55,7 +55,7 @@
                                                     <constraint firstAttribute="height" constant="125" id="Rmm-ni-CSr"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tpt-ox-kEe">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="socialMedia.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tpt-ox-kEe">
                                                 <rect key="frame" x="20" y="211" width="125" height="125"/>
                                                 <color key="backgroundColor" red="1" green="0.85736000170000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -63,7 +63,7 @@
                                                     <constraint firstAttribute="height" constant="125" id="yPq-4q-Eya"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f2i-lM-pRQ">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listenOnline.png" translatesAutoresizingMaskIntoConstraints="NO" id="f2i-lM-pRQ">
                                                 <rect key="frame" x="230" y="211" width="125" height="125"/>
                                                 <color key="backgroundColor" red="1" green="0.85736000170000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -71,7 +71,7 @@
                                                     <constraint firstAttribute="width" constant="125" id="h5J-wV-Wdm"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iI3-iK-YWL">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Music.png" translatesAutoresizingMaskIntoConstraints="NO" id="iI3-iK-YWL">
                                                 <rect key="frame" x="230" y="386" width="125" height="125"/>
                                                 <color key="backgroundColor" red="1" green="0.85736000170000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -79,7 +79,7 @@
                                                     <constraint firstAttribute="width" constant="125" id="Vmc-Ux-GrD"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SWj-5h-QjN">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photosPic.png" translatesAutoresizingMaskIntoConstraints="NO" id="SWj-5h-QjN">
                                                 <rect key="frame" x="20" y="386" width="125" height="125"/>
                                                 <color key="backgroundColor" red="1" green="0.85736000170000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -87,7 +87,7 @@
                                                     <constraint firstAttribute="width" constant="125" id="fDy-Cl-UTz"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HcE-gD-GaT">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="getInvolved.png" translatesAutoresizingMaskIntoConstraints="NO" id="HcE-gD-GaT">
                                                 <rect key="frame" x="20" y="561" width="125" height="125"/>
                                                 <color key="backgroundColor" red="1" green="0.85736000170000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -95,7 +95,7 @@
                                                     <constraint firstAttribute="height" constant="125" id="kxw-4O-ywy"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="njO-h6-JUn">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blogPost.png" translatesAutoresizingMaskIntoConstraints="NO" id="njO-h6-JUn">
                                                 <rect key="frame" x="230" y="561" width="125" height="125"/>
                                                 <color key="backgroundColor" red="1" green="0.85736000170000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -172,25 +172,6 @@
             </objects>
             <point key="canvasLocation" x="965.5" y="99.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="MrU-jv-Ly9">
-            <objects>
-                <viewController id="Xrj-ll-nlU" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="u9O-hv-ukU"/>
-                        <viewControllerLayoutGuide type="bottom" id="j0O-x8-yeA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lW2-MZ-6hP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VMD-VR-HjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1380" y="51"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="uzT-0y-cv4">
             <objects>
@@ -213,7 +194,15 @@
     <resources>
         <image name="Facebook.png" width="25" height="25"/>
         <image name="Instagram.png" width="25" height="25"/>
+        <image name="Music.png" width="250" height="250"/>
         <image name="Twitter.png" width="25" height="25"/>
         <image name="YouTube.png" width="25" height="25"/>
+        <image name="aboutBasic.png" width="250" height="250"/>
+        <image name="blogPost.png" width="250" height="250"/>
+        <image name="getInvolved.png" width="250" height="250"/>
+        <image name="listenOnline.png" width="250" height="250"/>
+        <image name="photosPic.png" width="250" height="250"/>
+        <image name="schedulePic.png" width="250" height="250"/>
+        <image name="socialMedia.png" width="150" height="150"/>
     </resources>
 </document>

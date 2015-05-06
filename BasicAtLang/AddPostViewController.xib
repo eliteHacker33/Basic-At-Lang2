@@ -17,16 +17,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vll-vs-zha">
-                    <rect key="frame" x="77" y="387" width="167" height="140"/>
-                    <color key="backgroundColor" red="0.62716697079999995" green="0.83987226280000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="140" id="7bV-vM-Ctx"/>
-                        <constraint firstAttribute="width" constant="167" id="IMo-xZ-2Cc"/>
-                    </constraints>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2R-ln-Bwr">
-                    <rect key="frame" x="266" y="530" width="46" height="30"/>
+                    <rect key="frame" x="270" y="530" width="42" height="30"/>
                     <state key="normal" title="Post">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -35,34 +27,39 @@
                     </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="g65-0D-QRO">
-                    <rect key="frame" x="8" y="100" width="304" height="266"/>
+                    <rect key="frame" x="8" y="90" width="304" height="276"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Image Will be resized Later" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHx-TS-dea">
-                    <rect key="frame" x="8" y="534" width="241" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The image will be resized later" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHx-TS-dea">
+                    <rect key="frame" x="8" y="534" width="231" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vll-vs-zha">
+                    <rect key="frame" x="77" y="374" width="167" height="140"/>
+                    <color key="backgroundColor" red="0.62716697079999995" green="0.83987226280000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="qgE-Jz-Wwo"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="vll-vs-zha" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="77" id="6Bn-fZ-Y9r"/>
-                <constraint firstItem="g65-0D-QRO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="88z-93-wBX"/>
-                <constraint firstItem="ZHx-TS-dea" firstAttribute="top" secondItem="vll-vs-zha" secondAttribute="bottom" constant="7" id="DCJ-2L-hO5"/>
-                <constraint firstAttribute="trailing" secondItem="g65-0D-QRO" secondAttribute="trailing" constant="8" id="Gcl-SH-EkS"/>
-                <constraint firstAttribute="bottom" secondItem="vll-vs-zha" secondAttribute="bottom" constant="41" id="I9m-qJ-9QZ"/>
-                <constraint firstItem="V2R-ln-Bwr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="266" id="KWa-3n-dfu"/>
-                <constraint firstItem="ZHx-TS-dea" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Rff-1p-lV9"/>
-                <constraint firstAttribute="trailing" secondItem="V2R-ln-Bwr" secondAttribute="trailing" constant="8" id="bMG-fT-LLL"/>
-                <constraint firstItem="V2R-ln-Bwr" firstAttribute="leading" secondItem="ZHx-TS-dea" secondAttribute="trailing" constant="17" id="fzE-ua-Awn"/>
-                <constraint firstItem="vll-vs-zha" firstAttribute="top" secondItem="g65-0D-QRO" secondAttribute="bottom" constant="21" id="hHQ-gY-Z0t"/>
-                <constraint firstItem="g65-0D-QRO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="nOv-rh-YTa"/>
-                <constraint firstAttribute="bottom" secondItem="ZHx-TS-dea" secondAttribute="bottom" constant="13" id="pOX-t6-JOn"/>
-                <constraint firstAttribute="bottom" secondItem="V2R-ln-Bwr" secondAttribute="bottom" constant="8" id="qBI-s2-fay"/>
-                <constraint firstAttribute="trailing" secondItem="vll-vs-zha" secondAttribute="trailing" constant="76" id="z61-fU-14g"/>
+                <constraint firstAttribute="trailing" secondItem="V2R-ln-Bwr" secondAttribute="trailing" constant="8" id="5SP-Pg-UnK"/>
+                <constraint firstItem="g65-0D-QRO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="7Gp-Pp-gIh"/>
+                <constraint firstAttribute="bottom" secondItem="ZHx-TS-dea" secondAttribute="bottom" constant="13" id="KAB-GC-WZG"/>
+                <constraint firstAttribute="bottom" secondItem="V2R-ln-Bwr" secondAttribute="bottom" constant="8" id="Kep-ua-GBk"/>
+                <constraint firstItem="g65-0D-QRO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Vpt-r5-ibl"/>
+                <constraint firstItem="vll-vs-zha" firstAttribute="centerX" secondItem="g65-0D-QRO" secondAttribute="centerX" id="Yoi-hq-2T0"/>
+                <constraint firstItem="vll-vs-zha" firstAttribute="top" secondItem="g65-0D-QRO" secondAttribute="bottom" constant="8" id="dVn-Em-bH4"/>
+                <constraint firstAttribute="trailing" secondItem="g65-0D-QRO" secondAttribute="trailing" constant="8" id="fau-r6-ls9"/>
+                <constraint firstItem="ZHx-TS-dea" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="pvN-YU-Ebz"/>
+                <constraint firstItem="V2R-ln-Bwr" firstAttribute="leading" secondItem="ZHx-TS-dea" secondAttribute="trailing" constant="31" id="sLo-K0-EIM"/>
+                <constraint firstItem="ZHx-TS-dea" firstAttribute="top" secondItem="vll-vs-zha" secondAttribute="bottom" constant="20" id="vrR-cD-MEf"/>
+                <constraint firstItem="vll-vs-zha" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="77" id="yyW-7I-Nik"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="83" y="242"/>

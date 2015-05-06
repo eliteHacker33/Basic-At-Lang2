@@ -114,6 +114,14 @@
 		18626E8D1AA5706000CF3B7C /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E8B1AA5706000CF3B7C /* MusicViewController.xib */; };
 		186684A41AEC277A0032B360 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186684A31AEC277A0032B360 /* CustomTableViewCell.m */; };
 		186684A61AEC3A6D0032B360 /* BlogViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186684A51AEC3A6D0032B360 /* BlogViewController.storyboard */; };
+		187CE5B71AF92055009EE8E3 /* blogPost.png in Resources */ = {isa = PBXBuildFile; fileRef = 187CE5B61AF92055009EE8E3 /* blogPost.png */; };
+		187CE5BC1AF92060009EE8E3 /* Music.png in Resources */ = {isa = PBXBuildFile; fileRef = 187CE5B81AF92060009EE8E3 /* Music.png */; };
+		187CE5BD1AF92060009EE8E3 /* photosPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 187CE5B91AF92060009EE8E3 /* photosPic.png */; };
+		187CE5BE1AF92060009EE8E3 /* schedulePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 187CE5BA1AF92060009EE8E3 /* schedulePic.png */; };
+		187CE5BF1AF92060009EE8E3 /* socialMedia.png in Resources */ = {isa = PBXBuildFile; fileRef = 187CE5BB1AF92060009EE8E3 /* socialMedia.png */; };
+		187CE5C11AF92069009EE8E3 /* listenOnline.png in Resources */ = {isa = PBXBuildFile; fileRef = 187CE5C01AF92069009EE8E3 /* listenOnline.png */; };
+		187CE5C31AF92077009EE8E3 /* aboutBasic.png in Resources */ = {isa = PBXBuildFile; fileRef = 187CE5C21AF92077009EE8E3 /* aboutBasic.png */; };
+		187CE5C51AF92088009EE8E3 /* getInvolved.png in Resources */ = {isa = PBXBuildFile; fileRef = 187CE5C41AF92088009EE8E3 /* getInvolved.png */; };
 		189E04D31AEB1009003D8B6C /* FullPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E04D11AEB1009003D8B6C /* FullPhotoViewController.m */; };
 		189E04D41AEB1009003D8B6C /* FullPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189E04D21AEB1009003D8B6C /* FullPhotoViewController.xib */; };
 		189EC6771AED94BC00D11D8E /* BlogReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EC6751AED94BC00D11D8E /* BlogReaderViewController.m */; };
@@ -269,6 +277,14 @@
 		186684A21AEC277A0032B360 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		186684A31AEC277A0032B360 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		186684A51AEC3A6D0032B360 /* BlogViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BlogViewController.storyboard; sourceTree = "<group>"; };
+		187CE5B61AF92055009EE8E3 /* blogPost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blogPost.png; sourceTree = "<group>"; };
+		187CE5B81AF92060009EE8E3 /* Music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Music.png; sourceTree = "<group>"; };
+		187CE5B91AF92060009EE8E3 /* photosPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photosPic.png; sourceTree = "<group>"; };
+		187CE5BA1AF92060009EE8E3 /* schedulePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = schedulePic.png; sourceTree = "<group>"; };
+		187CE5BB1AF92060009EE8E3 /* socialMedia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = socialMedia.png; sourceTree = "<group>"; };
+		187CE5C01AF92069009EE8E3 /* listenOnline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = listenOnline.png; sourceTree = "<group>"; };
+		187CE5C21AF92077009EE8E3 /* aboutBasic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutBasic.png; sourceTree = "<group>"; };
+		187CE5C41AF92088009EE8E3 /* getInvolved.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getInvolved.png; sourceTree = "<group>"; };
 		189E04D01AEB1009003D8B6C /* FullPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullPhotoViewController.h; sourceTree = "<group>"; };
 		189E04D11AEB1009003D8B6C /* FullPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullPhotoViewController.m; sourceTree = "<group>"; };
 		189E04D21AEB1009003D8B6C /* FullPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullPhotoViewController.xib; sourceTree = "<group>"; };
@@ -348,6 +364,14 @@
 		18626E2A1AA561F000CF3B7C = {
 			isa = PBXGroup;
 			children = (
+				187CE5B61AF92055009EE8E3 /* blogPost.png */,
+				187CE5B81AF92060009EE8E3 /* Music.png */,
+				187CE5B91AF92060009EE8E3 /* photosPic.png */,
+				187CE5BA1AF92060009EE8E3 /* schedulePic.png */,
+				187CE5BB1AF92060009EE8E3 /* socialMedia.png */,
+				187CE5C01AF92069009EE8E3 /* listenOnline.png */,
+				187CE5C21AF92077009EE8E3 /* aboutBasic.png */,
+				187CE5C41AF92088009EE8E3 /* getInvolved.png */,
 				185BFE7C1AEB50230080007F /* 1.jpg */,
 				185BFE7D1AEB50230080007F /* 2.jpg */,
 				185BFE7E1AEB50230080007F /* 3.jpg */,
@@ -697,7 +721,9 @@
 				185BFEE21AEB50230080007F /* 23.jpg in Resources */,
 				185BFF061AEB50230080007F /* 59.jpg in Resources */,
 				185BFECF1AEB50230080007F /* 4.jpg in Resources */,
+				187CE5C11AF92069009EE8E3 /* listenOnline.png in Resources */,
 				18E403AD1AE9F0E2001BFD95 /* PhotosViewController.storyboard in Resources */,
+				187CE5C51AF92088009EE8E3 /* getInvolved.png in Resources */,
 				185BFEFE1AEB50230080007F /* 51.jpg in Resources */,
 				186684A61AEC3A6D0032B360 /* BlogViewController.storyboard in Resources */,
 				185BFECC1AEB50230080007F /* 1.jpg in Resources */,
@@ -705,6 +731,7 @@
 				185BFECD1AEB50230080007F /* 2.jpg in Resources */,
 				18F8C87C1AC7307100A1E8D1 /* Facebook@2x.png in Resources */,
 				18626E451AA561F000CF3B7C /* Main.storyboard in Resources */,
+				187CE5BD1AF92060009EE8E3 /* photosPic.png in Resources */,
 				185BFF1A1AEB50230080007F /* 79.jpg in Resources */,
 				185BFEF81AEB50230080007F /* 45.jpg in Resources */,
 				185BFF0B1AEB50230080007F /* 64.jpg in Resources */,
@@ -736,6 +763,7 @@
 				185BFEE71AEB50230080007F /* 28.jpg in Resources */,
 				185BFF001AEB50230080007F /* 53.jpg in Resources */,
 				185BFED21AEB50230080007F /* 7.jpg in Resources */,
+				187CE5C31AF92077009EE8E3 /* aboutBasic.png in Resources */,
 				18B7A1121AF87A7100F8F4E5 /* FullPostViewController.xib in Resources */,
 				185BFF071AEB50230080007F /* 60.jpg in Resources */,
 				185BFEF91AEB50230080007F /* 46.jpg in Resources */,
@@ -753,6 +781,7 @@
 				185BFF161AEB50230080007F /* 75.jpg in Resources */,
 				185BFEFF1AEB50230080007F /* 52.jpg in Resources */,
 				18626E471AA561F000CF3B7C /* Images.xcassets in Resources */,
+				187CE5BE1AF92060009EE8E3 /* schedulePic.png in Resources */,
 				18E403A71AE9A0B4001BFD95 /* 66.jpg in Resources */,
 				185BFEF51AEB50230080007F /* 42.jpg in Resources */,
 				185BFEE41AEB50230080007F /* 25.jpg in Resources */,
@@ -779,11 +808,14 @@
 				1851721D1AF1EF3E00DB8163 /* LinkSocialMediaViewController.xib in Resources */,
 				185BFEDE1AEB50230080007F /* 19.jpg in Resources */,
 				185BFED01AEB50230080007F /* 5.jpg in Resources */,
+				187CE5BF1AF92060009EE8E3 /* socialMedia.png in Resources */,
+				187CE5B71AF92055009EE8E3 /* blogPost.png in Resources */,
 				18F8C8801AC7308300A1E8D1 /* YouTube@2x.png in Resources */,
 				185BFF131AEB50230080007F /* 72.jpg in Resources */,
 				185BFEE31AEB50230080007F /* 24.jpg in Resources */,
 				185BFF121AEB50230080007F /* 71.jpg in Resources */,
 				185BFF0A1AEB50230080007F /* 63.jpg in Resources */,
+				187CE5BC1AF92060009EE8E3 /* Music.png in Resources */,
 				18626E691AA56EEF00CF3B7C /* AboutMissionViewController.xib in Resources */,
 				185BFEDA1AEB50230080007F /* 15.jpg in Resources */,
 				185BFEDF1AEB50230080007F /* 20.jpg in Resources */,

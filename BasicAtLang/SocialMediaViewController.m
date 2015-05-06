@@ -88,7 +88,7 @@
     self.fullPostImageView.image=image;
 //    self.fullPostImageView.center = self.view.center;
     self.fullPostImageView.center = CGPointMake(self.view.frame.size.width  / 2,
-                                                self.view.frame.size.height /2 - 100);
+                                                self.view.frame.size.height /2 - 200);
     FullPostViewController *fpvc = [[FullPostViewController alloc]initWithNibName:@"FullPostViewController" bundle:nil];
     [fpvc view];
     [fpvc.fullPostScrollView addSubview:self.fullPostImageView];
