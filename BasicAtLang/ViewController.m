@@ -156,7 +156,8 @@
 {
     [UIView animateWithDuration:0.1 animations:^{self.scheduleImage.alpha = 0.0;}];
     [UIView animateWithDuration:0.3 animations:^{self.scheduleImage.alpha = 1.0;}];
-    ScheduleViewController *scheduleViewController = [ScheduleViewController new];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ScheduleViewController" bundle:nil];
+    ScheduleViewController *scheduleViewController = (ScheduleViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ScheduleViewController"];
     [self.navigationController pushViewController:scheduleViewController animated:YES];
 }
 

@@ -7,9 +7,14 @@
 //
 
 #import "ScheduleViewController.h"
+#import "ScheduleTableViewCell.h"
 
 @interface ScheduleViewController ()
 
+@property (nonatomic, strong)NSMutableArray *dateArray;
+@property (nonatomic, strong)NSMutableArray *teachingSeriesArray;
+@property (nonatomic, strong)NSMutableArray *placeArray;
+@property (nonatomic, strong)NSMutableArray *timeArray;
 
 @end
 
@@ -18,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Schedule";
+    [self.scheduleTableView reloadData];
     [self csvParser];
     // Do any additional setup after loading the view from its nib.
 }
@@ -29,50 +35,68 @@
 
 - (void)csvParser{
 
-    NSString *pathName = [NSString stringWithFormat:@"/Users/ethanwestering/LayerOfAbstraction/Undergrad Research/myUserAccounts.csv"];
+    NSString *pathName = [NSString stringWithFormat:@"/Users/ethanwestering/LayerOfAbstraction/Undergrad Research/basicSchedule.csv"];
     NSString *finalRespStr = [NSString stringWithContentsOfFile:pathName encoding:NSStringEncodingConversionAllowLossy error:nil];
 
+    self.dateArray = [NSMutableArray new];
+    self.teachingSeriesArray = [NSMutableArray new];
+    self.placeArray = [NSMutableArray new];
+    self.timeArray = [NSMutableArray new];
+    
+    
     NSArray *array = [finalRespStr componentsSeparatedByString:@"\n"];
-    NSMutableString *mutableBothEnabled = [NSMutableString new];
-    NSMutableString *mutableHasShellAccess = [NSMutableString new];
-    NSMutableString *mutableHasRDPAccess = [NSMutableString new];
-    NSMutableString *mutableHasNeither = [NSMutableString new];
     
     for (NSString *brokenUp in array){
         NSArray *arrayStrr = [brokenUp componentsSeparatedByString:@","];
-        if ([arrayStrr[0]  isEqual: @""]) {
-//            NSLog(@"%lu", (unsigned long)[array count]);
-            break;
+        if ([arrayStrr count] > 2) {
+            [self.dateArray addObject:arrayStrr[0]];
+            [self.teachingSeriesArray addObject:arrayStrr[1]];
+            [self.placeArray addObject:arrayStrr[2]];
+            [self.timeArray addObject:arrayStrr[3]];
         }
-        if (([arrayStrr[4] integerValue] == 1) && ([arrayStrr[5]integerValue] == 1)) {
-            [mutableBothEnabled appendString:[NSString stringWithFormat:@"%@\n",brokenUp]];
-        }
-        else if([arrayStrr[4]integerValue] == 1){
-            [mutableHasShellAccess appendString:[NSString stringWithFormat:@"%@\n",brokenUp]];
-        }
-        else if([arrayStrr[5]integerValue] == 1 ){
-            [mutableHasRDPAccess appendString:[NSString stringWithFormat:@"%@\n",brokenUp]];
-        }
-        else{
-            [mutableHasNeither appendString:[NSString stringWithFormat:@"%@\n", brokenUp]];
-        }
-        [mutableBothEnabled writeToFile:@"Users/ethanwestering/bothEnabled.csv" atomically:YES encoding:NSStringEncodingConversionAllowLossy error:nil];
-        [mutableHasShellAccess writeToFile:@"Users/ethanwestering/shellAccessEnabled.csv" atomically:YES encoding:NSStringEncodingConversionAllowLossy error:nil];
-        [mutableHasRDPAccess writeToFile:@"Users/ethanwestering/rdpAccessonly.csv" atomically:YES encoding:NSStringEncodingConversionAllowLossy error:nil];
-        [mutableHasNeither writeToFile:@"Users/ethanwestering/neitherEnabled.csv" atomically:YES encoding:NSStringEncodingConversionAllowLossy error:nil];
+    }
 }
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    ScheduleTableViewCell *stvc = [tableView dequeueReusableCellWithIdentifier:@"scheduleCell" forIndexPath:indexPath];
+    if (stvc == nil) {
+        stvc = [[ScheduleTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ScheduleTableViewCell"];
+    }
     
-//    NSLog(@"%@\n%@\n%@", arrayStrr[0], arrayStrr[1],arrayStrr[2]);
+    NSArray *colorArray = @[[UIColor whiteColor],[UIColor redColor],[UIColor orangeColor],[UIColor yellowColor],[UIColor greenColor],[UIColor grayColor], [UIColor blueColor], [UIColor blackColor], [UIColor purpleColor]];
+    int r = arc4random_uniform(9);
+    if (colorArray[r] == [UIColor blueColor] || colorArray[r] == [UIColor blackColor] || colorArray[r] == [UIColor purpleColor]){
+        stvc.dateLabel.textColor = [UIColor whiteColor];
+        stvc.placeLabel.textColor = [UIColor whiteColor];
+        stvc.timeLabel.textColor = [UIColor whiteColor];
+        stvc.teachingLabel.textColor = [UIColor whiteColor];
+    }
+    else{
+        stvc.dateLabel.textColor = [UIColor blackColor];
+        stvc.placeLabel.textColor = [UIColor blackColor];
+        stvc.timeLabel.textColor = [UIColor blackColor];
+        stvc.teachingLabel.textColor = [UIColor blackColor];
+    }
+    
+    stvc.backgroundColor = colorArray[r];
+    stvc.dateLabel.text = [self.dateArray objectAtIndex:indexPath.row];
+    stvc.placeLabel.text = [self.placeArray objectAtIndex:indexPath.item];
+    stvc.timeLabel.text = [self.timeArray objectAtIndex:indexPath.item];
+    stvc.teachingLabel.text = [self.teachingSeriesArray objectAtIndex:indexPath.item];
+    
+    return stvc;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
-*/
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.dateArray count];
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 
 @end

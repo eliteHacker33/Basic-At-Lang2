@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1833B0431AF9D20F008363E9 /* ScheduleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1833B0421AF9D20F008363E9 /* ScheduleViewController.storyboard */; };
+		1833B0461AF9D5B5008363E9 /* ScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1833B0451AF9D5B5008363E9 /* ScheduleTableViewCell.m */; };
 		184648671AAD3FA800906C58 /* GetInvolvedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184648651AAD3FA800906C58 /* GetInvolvedViewController.m */; };
 		184648681AAD3FA800906C58 /* GetInvolvedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184648661AAD3FA800906C58 /* GetInvolvedViewController.xib */; };
 		1851721C1AF1EF3E00DB8163 /* LinkSocialMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851721A1AF1EF3E00DB8163 /* LinkSocialMediaViewController.m */; };
@@ -104,7 +106,6 @@
 		18626E681AA56EEF00CF3B7C /* AboutMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E661AA56EEF00CF3B7C /* AboutMissionViewController.m */; };
 		18626E691AA56EEF00CF3B7C /* AboutMissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E671AA56EEF00CF3B7C /* AboutMissionViewController.xib */; };
 		18626E6D1AA56F0400CF3B7C /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E6B1AA56F0400CF3B7C /* ScheduleViewController.m */; };
-		18626E6E1AA56F0400CF3B7C /* ScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E6C1AA56F0400CF3B7C /* ScheduleViewController.xib */; };
 		18626E781AA56FF300CF3B7C /* SocialMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E761AA56FF300CF3B7C /* SocialMediaViewController.m */; };
 		18626E7D1AA5701B00CF3B7C /* ListenOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626E7B1AA5701B00CF3B7C /* ListenOnlineViewController.m */; };
 		18626E7E1AA5701B00CF3B7C /* ListenOnlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18626E7C1AA5701B00CF3B7C /* ListenOnlineViewController.xib */; };
@@ -153,6 +154,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1833B0421AF9D20F008363E9 /* ScheduleViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScheduleViewController.storyboard; sourceTree = "<group>"; };
+		1833B0441AF9D5B5008363E9 /* ScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTableViewCell.h; sourceTree = "<group>"; };
+		1833B0451AF9D5B5008363E9 /* ScheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTableViewCell.m; sourceTree = "<group>"; };
 		184648641AAD3FA800906C58 /* GetInvolvedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetInvolvedViewController.h; sourceTree = "<group>"; };
 		184648651AAD3FA800906C58 /* GetInvolvedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetInvolvedViewController.m; sourceTree = "<group>"; };
 		184648661AAD3FA800906C58 /* GetInvolvedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetInvolvedViewController.xib; sourceTree = "<group>"; };
@@ -261,7 +265,6 @@
 		18626E671AA56EEF00CF3B7C /* AboutMissionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutMissionViewController.xib; sourceTree = "<group>"; };
 		18626E6A1AA56F0400CF3B7C /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		18626E6B1AA56F0400CF3B7C /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
-		18626E6C1AA56F0400CF3B7C /* ScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleViewController.xib; sourceTree = "<group>"; };
 		18626E751AA56FF300CF3B7C /* SocialMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaViewController.h; sourceTree = "<group>"; };
 		18626E761AA56FF300CF3B7C /* SocialMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaViewController.m; sourceTree = "<group>"; };
 		18626E7A1AA5701B00CF3B7C /* ListenOnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenOnlineViewController.h; sourceTree = "<group>"; };
@@ -540,7 +543,9 @@
 			children = (
 				18626E6A1AA56F0400CF3B7C /* ScheduleViewController.h */,
 				18626E6B1AA56F0400CF3B7C /* ScheduleViewController.m */,
-				18626E6C1AA56F0400CF3B7C /* ScheduleViewController.xib */,
+				1833B0421AF9D20F008363E9 /* ScheduleViewController.storyboard */,
+				1833B0441AF9D5B5008363E9 /* ScheduleTableViewCell.h */,
+				1833B0451AF9D5B5008363E9 /* ScheduleTableViewCell.m */,
 			);
 			name = Schedule;
 			path = ..;
@@ -743,7 +748,6 @@
 				185BFF051AEB50230080007F /* 58.jpg in Resources */,
 				185BFEE61AEB50230080007F /* 27.jpg in Resources */,
 				18626E4A1AA561F000CF3B7C /* LaunchScreen.xib in Resources */,
-				18626E6E1AA56F0400CF3B7C /* ScheduleViewController.xib in Resources */,
 				18F8C87A1AC72E7300A1E8D1 /* Twitter@2x.png in Resources */,
 				185BFEF71AEB50230080007F /* 44.jpg in Resources */,
 				185BFF031AEB50230080007F /* 56.jpg in Resources */,
@@ -763,6 +767,7 @@
 				185BFEE71AEB50230080007F /* 28.jpg in Resources */,
 				185BFF001AEB50230080007F /* 53.jpg in Resources */,
 				185BFED21AEB50230080007F /* 7.jpg in Resources */,
+				1833B0431AF9D20F008363E9 /* ScheduleViewController.storyboard in Resources */,
 				187CE5C31AF92077009EE8E3 /* aboutBasic.png in Resources */,
 				18B7A1121AF87A7100F8F4E5 /* FullPostViewController.xib in Resources */,
 				185BFF071AEB50230080007F /* 60.jpg in Resources */,
@@ -848,6 +853,7 @@
 				18626E7D1AA5701B00CF3B7C /* ListenOnlineViewController.m in Sources */,
 				18E403B01AEA13B1001BFD95 /* CustomCell.m in Sources */,
 				184648671AAD3FA800906C58 /* GetInvolvedViewController.m in Sources */,
+				1833B0461AF9D5B5008363E9 /* ScheduleTableViewCell.m in Sources */,
 				18626E6D1AA56F0400CF3B7C /* ScheduleViewController.m in Sources */,
 				18520CA71AE4606C004A0CFD /* AddPostViewController.m in Sources */,
 				18626E681AA56EEF00CF3B7C /* AboutMissionViewController.m in Sources */,
